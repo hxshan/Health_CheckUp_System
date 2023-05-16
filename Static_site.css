@@ -12,5 +12,38 @@
 .center{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    background-image: url(images/624111.jpg);
+    background-position: center; 
+    min-height: 700px;
+    color: white;
 }
+
+.top{
+    display: flex;
+    flex-direction: row;
+}
+.top button{
+    max-height: 50px;
+    min-width: 110px;
+    position: relative;
+    left:90rem;
+    top: 100px;
+    margin-right: 30px;
+    background-color:#23A0FA;
+    border-radius: 15px;
+    border: none;
+    color: white;
+}
+
+.top button:hover{
+    background-color:#15F68A;
+    cursor: pointer;
+}
+
+.medium button{
+    min-height: 60px;
+    min-width: 100px;
+}
+
