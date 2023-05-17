@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Roboto+Condensed:wght@700&display=swap');
+
 *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
+}
+
+main{
+    font-family: 'Arimo', sans-serif;
 }
 
 .reg{
@@ -14,7 +21,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(images/624111.jpg);
+    background-image: url(images/4113082.jpg);
     background-position: center; 
     min-height: 700px;
     color: white;
@@ -35,15 +42,41 @@
     border-radius: 15px;
     border: none;
     color: white;
+    transition: 0.5s;
+    font-weight: bold;
 }
 
 .top button:hover{
     background-color:#15F68A;
     cursor: pointer;
+    color: black;
 }
 
 .medium button{
     min-height: 60px;
     min-width: 120px;
+    border: none;
+    border-radius:none;
+    background-color:#23A0FA ;
+    transition: 0.5s;
+    color:white;
+    font-weight: bold;
+}
+.medium button:hover{
+    background-color: #15F68A;
+    color: black;
+    cursor: pointer;
+}
+.medium{
+    background-color: #23A0FA;
+}
+.medium h1{
+    margin-bottom: 150px;
+    max-width: 450px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+    color: #23A0FA;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
