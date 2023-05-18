@@ -149,4 +149,89 @@ svg{
     padding-bottom: 100px;
 }
 
+/*------------------------------------------contact page css---------------------------------------------------------------------------------------*/
 
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.contact{
+    border: 5px solid #054675;
+    max-height: 800px;
+    min-width: 500px;
+    border-radius: 20px;
+    align-items: center;
+    background-image: linear-gradient(#23A0FA,#15F68A);
+    margin-top: 150px;
+}
+
+.info{
+    border: 5px solid black;
+    max-height: 550px;
+    margin-left: 200px;
+    border-radius: 20px;
+}
+
+.contact h1{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 20px;
+}
+form{
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+form #fname{
+    border-radius: 8px;
+    border:5px solid #054675;
+    height: 40px;
+    margin-top: 20px;
+}
+form #lname{
+    border-radius: 8px;
+    height: 40px;
+    border:5px solid #054675;
+}
+form #email{
+    border-radius: 8px;
+    height: 40px;
+    width: 320px;
+    margin-top: 20px;
+    border:5px solid #054675;
+}
+form #phone{
+    border-radius: 8px;
+    height: 40px;
+    width: 200px;
+    margin-top: 20px;
+    border:5px solid #054675;
+}
+form #subject{
+    border-radius: 8px;
+    height: 40px;
+    width: 320px;
+    margin-top: 20px;
+    border:5px solid #054675;
+}
+form #message{
+    border-radius: 8px;
+    height: 150px;
+    width: 320px;
+    margin-top: 20px;
+    border:5px solid #054675;
+}
+form #send{
+    border-radius: 8px;
+    height: 40px;
+    width: 100px;
+    position: relative;
+    top: 110px;
+    cursor: pointer;
+}
+form h3{
+    margin-top: 20px;
+}
