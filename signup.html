@@ -3,7 +3,8 @@
     <head>
         <link rel="stylesheet" href="signup.css">
 
-        <title>Log-In</title>
+
+        <title>Sign-Up</title>
         
     </head>
 
@@ -11,7 +12,6 @@
         
         <div class="back-btn-div">
             <button class="back-btn" type="button">
-                
                 <lord-icon
                     src="https://cdn.lordicon.com/jxwksgwv.json"
                     trigger="hover"
@@ -25,21 +25,39 @@
         
 
         <form class="form" action="#">
-            <p class="title">Log In </p>
+            <p class="title">Register </p>
             <p class="message">message </p>
 
+                <div class="name-div">
+                <label>
+                    <input required="" placeholder="" type="text" class="input">
+                    <span>Firstname</span>
+                </label>
+        
+                <label>
+                    <input required="" placeholder="" type="text" class="input">
+                    <span>Lastname</span>
+                </label>
+            </div>  
+                    
             <label>
                 <input required="" placeholder="" type="text" class="input">
                 <span>Email</span>
             </label>
             
+                
+            <label>
+                <input required="" placeholder="" type="tel" class="input">
+                <span>Phone</span>
+            </label>
+
             <label>
                 <input required="" placeholder="" type="password" class="input">
                 <span>Password</span>
             </label>
-            <button class="submit">Sign in</button>
+            <button class="submit">Sign up</button>
 
-            <p class="signin">Don't have an acount ? <a href="#">Sign up</a> </p>
+            <p class="signin">Already have an acount ? <a href="#">Sign in</a> </p>
         </form>
 
 
