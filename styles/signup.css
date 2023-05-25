@@ -48,7 +48,7 @@
     width: 120px;
     height: 120 px;
     margin: auto;
-    animation: pulse 1.5s linear infinite;
+    animation: pulse 1s linear infinite;
 
   }
   
@@ -66,6 +66,7 @@
   
   .message {
     font-size: 1.2rem;
+    
     background: -webkit-linear-gradient(#7fd858, royalblue);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -151,25 +152,25 @@
   @keyframes pulse {
     0% {
       transform: scale(0.9);
-      opacity: 1;
+      
     }
   
     30% {
-      transform: scale(1.1);
-      opacity: .7;
+      transform: scale(1);
+      
     }
 
     50%{
-      transform: scale(1.0);
-      opacity: .9;
+      transform: scale(0.9);
+      
     }
-    70%{
-      transform: scale(1.1);
-      opacity: .7;
+    80%{
+      transform: scale(1.05);
+      
     }
     100%{
       transform: scale(.9);
-      opacity: 1;
+      
     }
     
   }
