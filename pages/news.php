@@ -4,26 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="Static_site.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/Static_site.css" />
     <title>News</title>
   </head>
   <body>
     <main>
-      <div class="top">
-        <a href="home.html"><img src="images/logo.png" width="250px" /></a>
-        <div class="log">
-          <button>Sign up</button>
-          <button>Log in</button>
-        </div>
-      </div>
-      <div class="medium">
-        <hr />
-        <a href="home.html"><button>Home</button></a>
-        <a href="contact.html"><button>Contact Us</button></a>
-        <a href="facility.html"><button>Facilities</button></a>
-        <a href="news.html"><button>News</button></a>
-        <hr />
-      </div>
+    <?php
+     include_once "components/guestheader.php"
+     ?>
+     
       <h1>News and Events</h1>
       <div class="new">
         <div class="one">

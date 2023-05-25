@@ -1,3 +1,9 @@
+<?php
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,28 +15,9 @@
   </head>
   <body>
     <main>
-      <div class="top">
-        <a href="home.html"><img src="images/logo.png" width="250px" /></a>
-        <div class="log">
-        <button>Sign up</button>
-        <button>Log in</button>
-        </div>
-      </div>
-      <div class="medium">
-        <hr />
-        <a href="home.html"><button>Home</button></a>
-        <a href="contact.html"><button>Contact Us</button></a>
-        <a href="facility.html"><button>Facilities</button></a>
-        <a href="news.html"><button>News</button></a>
-        <hr />
-        <div class="center">
-          <h1>Welcome to our Health Check-up & Diet System!</h1>
-          <div class="but">
-            <button>Book Appointment</button>
-            <button>Get Diet Plan</button>
-          </div>
-        </div>
-      </div>
+    <?php
+     include_once "components/guestheader.php"
+     ?>
       <section>
         <h1 class="title">FAQ</h1>
         <div class="faq">
@@ -133,6 +120,6 @@
           <img src="images/linkedin.svg" width="40px" />
           </div>
     </main>
-    <script src="home.js"></script>
+    <script src="scripts/home.js"></script>
   </body>
 </html>

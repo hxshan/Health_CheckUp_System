@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale= 1.0">
 
-        <link rel="stylesheet" href="signup.css">
+        <link rel="stylesheet" href="../styles/signup.css">
 
         <title>Log-In</title>
         
@@ -27,7 +27,7 @@
 
         
 
-        <form class="form" action="#">
+        <form class="form" action="#" method="post">
             <img class="form-img" src="images/form-heart.png">
             <div class="title">
                 <p class="title-text">Log In</p>
@@ -42,7 +42,7 @@
 
             <button class="submit">Sign in</button>
 
-            <p class="signin">Don't have an acount ? <a href="signup.html">Sign up</a> </p>
+            <p class="signin">Don't have an acount ? <a href="signup.php">Sign up</a> </p>
         </form>
 
         <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>

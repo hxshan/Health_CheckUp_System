@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale= 1.0">
 
-        <link rel="stylesheet" href="signup.css">
+        <link rel="stylesheet" href="../styles/signup.css">
 
         <title>Sign-Up</title>
         
@@ -26,8 +26,8 @@
 
         
 
-        <form class="form" action="#">
-            <img class="form-img" src="images/form-heart.png">
+        <form class="form" action="#" method="post">
+            <img class="form-img" src="../images/form-heart.png">
             <div class="title">
                 <p class="title-text">Register</p>
             </div>
@@ -48,7 +48,7 @@
 
             <button class="submit">Sign up</button>
 
-            <p class="signin">Already have an acount ? <a href="login.html">Sign in</a> </p>
+            <p class="signin">Already have an acount ? <a href="login.php">Sign in</a> </p>
         </form>
 
 
