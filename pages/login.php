@@ -13,7 +13,7 @@
     <body>
         
         <div class="back-btn-div">
-            <button class="back-btn" type="button">
+            <a href="../index.php"><button class="back-btn" type="button">
                 
                 <lord-icon
                     src="https://cdn.lordicon.com/jxwksgwv.json"
@@ -22,13 +22,13 @@
                     style="width:50px;height:50px;transform: rotate(180deg);">
                     
                 </lord-icon>
-            </button>
+            </button></a>
         </div>
 
         
 
         <form class="form" action="#" method="post">
-            <img class="form-img" src="images/form-heart.png">
+            <img class="form-img" src="../images/form-heart.png">
             <div class="title">
                 <p class="title-text">Log In</p>
             </div>

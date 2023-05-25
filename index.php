@@ -10,14 +10,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="Static_site.css" />
+    <link rel="stylesheet" type="text/css" href="styles/Static_site.css" />
     <title>Health Check ups</title>
+
   </head>
   <body>
+    
     <main>
-    <?php
-     include_once "components/guestheader.php"
-     ?>
+      <div class="top">
+        <a href="index.php"><img src="images/logo.png" width="250px" /></a>
+        <div class="log">
+        <a href="pages/signup.php"> <button>Sign up</button></a>
+        <a href="pages/login.php"> <button>Log in</button></a>
+        </div>
+      </div>
+      <div class="medium">
+        <hr />
+        <a href="index.php"><button>Home</button></a>
+        <a href="pages/contact.php"><button>Contact Us</button></a>
+        <a href="pages/facility.php"><button>Facilities</button></a>
+        <a href="pages/news.php"><button>News</button></a>
+        <hr />
+      </div>
+      <div class="center">
+        <h1>Welcome To our Health check-up & Diet System</h1>  
+      </div>
       <section>
         <h1 class="title">FAQ</h1>
         <div class="faq">

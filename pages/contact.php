@@ -9,9 +9,21 @@
   </head>
   <body>
     <main>
-     <?php
-     include_once "components/guestheader.php"
-     ?>
+    <div class="top">
+        <a href="../index.php"><img src="../images/logo.png" width="250px" /></a>
+        <div class="log">
+        <a href="signup.php"> <button>Sign up</button></a>
+        <a href="login.php"> <button>Log in</button></a>
+        </div>
+      </div>
+      <div class="medium">
+        <hr />
+        <a href="../index.php"><button>Home</button></a>
+        <a href="contact.php"><button>Contact Us</button></a>
+        <a href="facility.php"><button>Facilities</button></a>
+        <a href="news.php"><button>News</button></a>
+        <hr />
+</div>
       <div class="container">
         <div class="contact">
           <h1>Contact Forum</h1>

@@ -17,7 +17,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(images/4113082.jpg);
+    background-image: url(../images/4113082.jpg);
     background-position: center; 
     min-height: 700px;
     width:100vw;

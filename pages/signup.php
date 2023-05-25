@@ -13,7 +13,7 @@
     <body>
         
         <div class="back-btn-div">
-            <button class="back-btn" type="button">
+        <a href="../index.php"><button class="back-btn" type="button">
                 <lord-icon
                     src="https://cdn.lordicon.com/jxwksgwv.json"
                     trigger="hover"
@@ -21,7 +21,7 @@
                     style="width:50px;height:50px;transform: rotate(180deg);">
                     
                 </lord-icon>
-            </button>
+            </button></a>
         </div>
 
         

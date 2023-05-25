@@ -9,15 +9,27 @@
   </head>
   <body>
     <main>
-    <?php
-     include_once "components/guestheader.php"
-     ?>
+    <div class="top">
+        <a href="../index.php"><img src="../images/logo.png" width="250px" /></a>
+        <div class="log">
+        <a href="signup.php"> <button>Sign up</button></a>
+        <a href="login.php"> <button>Log in</button></a>
+        </div>
+      </div>
+      <div class="medium">
+        <hr />
+        <a href="../index.php"><button>Home</button></a>
+        <a href="contact.php"><button>Contact Us</button></a>
+        <a href="facility.php"><button>Facilities</button></a>
+        <a href="news.php"><button>News</button></a>
+        <hr />
+</div>
      
       <h1>News and Events</h1>
       <div class="new">
         <div class="one">
       <div class="loc">
-        <img src="images/location.jpg" width="400px" height="250px"/>
+        <img src="../images/location.jpg" width="400px" height="250px"/>
         <h2>New location</h2>
         <p>
           We have moved our company to two more new locations around this
@@ -26,7 +38,7 @@
         </p>
       </div>
       <div class="Achev">
-        <img src="images/achev.jpg" width="400px" height="250px" />
+        <img src="../images/achev.jpg" width="400px" height="250px" />
         <h2>Achievements</h2>
         <p>
           This health checkup & diet planning has since the commencement of
@@ -36,7 +48,7 @@
         </p>
       </div>
       <div class="rev">
-        <img src="images/review.webp" width="400px"  height="250px"/>
+        <img src="../images/review.webp" width="400px"  height="250px"/>
         <h2>Customer reviews</h2>
         <p>
           These reviews are written by satisfied customers from our organisation
@@ -45,7 +57,7 @@
       </div>
       <div class="two">
       <div class="doc">
-        <img src="images/doctor.webp" width="400px" height="250px"/>
+        <img src="../images/doctor.webp" width="400px" height="250px"/>
         <h2>New doctors</h2>
         <p>
           These are newly appointed doctors to our facilities,who are chosed by
@@ -53,7 +65,7 @@
         </p>
       </div>
       <div class="equi">
-        <img src="images/eqip.avif" width="400px" height="250px"/>
+        <img src="../images/eqip.avif" width="400px" height="250px"/>
         <h2>New equipments</h2>
         <p>
           since our advance development of our system, we bought new expensive
@@ -61,7 +73,7 @@
         </p>
       </div>
       <div class="cel">
-        <img src="images/new year.jpg" width="400px" height="250px"/>
+        <img src="../images/new year.jpg" width="400px" height="250px"/>
         <h2>New year celebration</h2>
         <p>our new year celebration with employees</p>
       </div>
@@ -69,10 +81,10 @@
       </div>
       <h2 class="fol">Follow us on</h2>
       <div class="share">
-        <img src="images/instagram.svg" width="40px" />
-            <img src="images/facebook.svg" width="40px" />
-            <img src="images/twitter.svg" width="40px" />
-            <img src="images/linkedin.svg" width="40px" />
+        <img src="../images/instagram.svg" width="40px" />
+            <img src="../images/facebook.svg" width="40px" />
+            <img src="../images/twitter.svg" width="40px" />
+            <img src="../images/linkedin.svg" width="40px" />
             </div>
     </main>
   </body>
