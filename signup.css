@@ -64,8 +64,15 @@
     margin: 0;
   }
   
+  .message {
+    font-size: 1.2rem;
+    background: -webkit-linear-gradient(#7fd858, royalblue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0;
+  }
   
-  .message, .signin {
+  .signin {
     color: rgba(88, 87, 87, 0.822);
     font-size: 14px;
   }
@@ -100,7 +107,7 @@
   .input1{
     margin-right: 0;
     width: 190px;
-    
+    margin-top: 3%;
   }
 
   .input2 {
