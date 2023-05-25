@@ -9,7 +9,7 @@
 
 main{
     font-family: 'Arimo', sans-serif;
-    background-image:linear-gradient(#15F68A,#23A0FA);
+    background-color: white;
 }
 
 .center{
@@ -20,6 +20,7 @@ main{
     background-image: url(images/4113082.jpg);
     background-position: center; 
     min-height: 700px;
+    width:100vw;
     color: white;
 }
 
@@ -68,6 +69,7 @@ main{
 }
 .medium{
     background-color: #23A0FA;
+    overflow-x: hidden;
 }
 .medium h1{
     margin-bottom: 150px;
@@ -98,7 +100,7 @@ section{
 
 .faq{
     max-width: 700px;
-    border-bottom: 5px solid #0d67a7;
+    border-bottom: 5px solid black;
     cursor: pointer;
     padding-bottom: 10px;
     text-align: center;
@@ -110,7 +112,7 @@ section{
     justify-content: space-between;
     align-items: center;
     min-height: 50px;
-    color:#0d67a7 ;
+    color:black;
     font-size: 18px;
 }
 
@@ -122,7 +124,7 @@ section{
 }
 .faq.active .answer{
     max-height: 300px;
-    color: #054675;
+    color: black;
     transition: 0.4s ease-in-out;
 }
 .faq.active svg{
@@ -136,7 +138,7 @@ svg{
 .title{
     font-size: 50px;
     margin-bottom: 10px;
-    color: #0d67a7;
+    color: black;
 }
 
 .share{
@@ -155,7 +157,7 @@ svg{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 110vh;
 }
 
 .contact{
@@ -164,14 +166,28 @@ svg{
     min-width: 500px;
     border-radius: 20px;
     align-items: center;
-    background-image: linear-gradient(#23A0FA,#15F68A);
-    margin-top: 150px;
+    margin-top: 100px;
+    color:black;
 }
 
 .info{
-    border: 5px solid black;
-    max-height: 550px;
+    border: 5px solid #054675;
+    min-height: 300px;
+    min-width: 500px;
     margin-left: 200px;
+    border-radius: 20px;
+    margin-top: 100px;
+    padding: 30px 0px 0px 60px;
+    color:black;
+}
+.location{
+    margin-left: 200px;
+    margin-top: 100px;
+    border: 5px solid #054675;
+    border-radius: 20px;
+}
+
+.location iframe{
     border-radius: 20px;
 }
 
@@ -189,38 +205,42 @@ form #fname{
     border-radius: 8px;
     border:5px solid #054675;
     height: 40px;
+    width: 200px;
     margin-top: 20px;
+    text-align: center;
 }
 form #lname{
     border-radius: 8px;
     height: 40px;
+    width: 200px;
     border:5px solid #054675;
+    text-align: center;
 }
 form #email{
     border-radius: 8px;
     height: 40px;
-    width: 320px;
+    width: 405px;
     margin-top: 20px;
     border:5px solid #054675;
 }
 form #phone{
     border-radius: 8px;
     height: 40px;
-    width: 200px;
+    width: 405px;
     margin-top: 20px;
     border:5px solid #054675;
 }
 form #subject{
     border-radius: 8px;
     height: 40px;
-    width: 320px;
+    width: 405px;
     margin-top: 20px;
     border:5px solid #054675;
 }
 form #message{
     border-radius: 8px;
     height: 150px;
-    width: 320px;
+    width: 405px;
     margin-top: 20px;
     border:5px solid #054675;
 }
@@ -230,8 +250,223 @@ form #send{
     width: 100px;
     position: relative;
     top: 110px;
+    right: 20px;
     cursor: pointer;
+    background-color: #23A0FA;
+    color: white;
+    border: none;
+    transition: 0.5s;
+}
+form #send:hover{
+    background-color: #15F68A;
+    color: black;
+    transition: 0.5s;
 }
 form h3{
     margin-top: 20px;
+}
+
+.info h2{
+    font-size: 50px;
+}
+.info p{
+    font-size: large;
+    padding-top: 15px;
+}
+.info .icons{
+    margin-top: 20px;
+    margin-left: 30px;
+    align-items: center;
+    max-width: 400px;
+}
+.info .icons img{
+    margin-left: 50px;
+}
+
+/*------------------------------------------facilities page css---------------------------------------------------------------------------------------*/
+
+.center h1{
+    color:#23A0FA;
+    font-size: 50px;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    min-height: 50vh;
+    margin-top: 100px;
+}
+.hos h2{
+    margin-top: 30px;
+}
+.hos p{
+    margin-top: 50px;
+}
+
+.hos img{
+    width: 80px;
+    margin-top: 50px;
+}
+.hos{
+    text-align: center;
+    max-width: 350px;
+    max-height: 350px;
+    border:5px solid #054675;
+    padding: 10px;
+    border-radius: 20px;
+    
+}
+.dia{
+    text-align: center;
+    max-width: 350px;
+    max-height: 350px;
+    border:5px solid #054675;
+    padding: 10px;
+    border-radius: 20px;
+}
+.dia h2{
+    margin-top: 30px;
+}
+.dia p{
+    margin-top: 30px;
+    max-width: 350px;
+}
+
+.dia img{
+    width: 80px;
+    margin-top: 50px;
+}
+.well{
+    text-align: center;
+    max-width: 350px;
+    max-height: 350px;
+    border:5px solid #054675;
+    padding: 10px;
+    border-radius: 20px;
+}
+.well h2{
+    margin-top: 30px;
+}
+.well p{
+    margin-top: 30px;
+}
+
+.well img{
+    width: 80px;
+    margin-top: 50px;
+}
+.lab{
+    text-align: center;
+    max-width: 350px;
+    max-height: 350px;
+    border:5px solid #054675;
+    padding: 10px;
+    border-radius: 20px;
+}
+.lab h2{
+    margin-top: 30px;
+}
+.lab p{
+    margin-top: 30px;
+    max-width: 350px;
+}
+
+.lab img{
+    width: 80px;
+    margin-top: 50px;
+}
+/*------------------------------------------news page css---------------------------------------------------------------------------------------*/
+
+.loc{
+    max-width: 400px;
+    min-height: 400px;
+    text-align: center;
+    background-color: #23A0FA;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.loc p{
+    padding-top: 20px;
+    
+}
+
+
+.Achev{
+    max-width: 400px;
+    min-height: 400px;
+    text-align: center;
+    background-color: #23A0FA;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.rev{
+    max-width: 400px;
+    min-height: 400px;
+    text-align: center;
+    background-color: #23A0FA;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.rev p{
+    padding-top: 20px;
+    
+}
+.doc{
+    max-width: 400px;
+    min-height: 400px;
+    text-align: center;
+    background-color: #23A0FA;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.doc p{
+    padding-top: 20px;
+}
+.equi{
+    max-width: 400px;
+    min-height: 400px;
+    text-align: center;
+    background-color: #23A0FA;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.equi p{
+    padding-top: 20px;
+    
+}
+.cel{
+    max-width: 400px;
+    min-height: 400px;
+    text-align: center;
+    background-color: #23A0FA;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.cel p{
+    padding-top: 20px;
+    
+}
+.new{
+    display: flex;
+    flex-direction: column;
+    min-height: 120vh;
+}
+.one{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+.two{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+.fol{
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bolder;
+    font-size: 30px;
 }
