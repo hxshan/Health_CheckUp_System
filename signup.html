@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="signup.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale= 1.0">
 
+        <link rel="stylesheet" href="signup.css">
 
         <title>Sign-Up</title>
         
@@ -25,36 +27,25 @@
         
 
         <form class="form" action="#">
-            <p class="title">Register </p>
+            <img class="form-img" src="images/form-heart.png">
+            <div class="title">
+                <p class="title-text">Register</p>
+            </div>
+           
             <p class="message">message </p>
 
-                <div class="name-div">
-                <label>
-                    <input required="" placeholder="" type="text" class="input">
-                    <span>Firstname</span>
-                </label>
-        
-                <label>
-                    <input required="" placeholder="" type="text" class="input">
-                    <span>Lastname</span>
-                </label>
-            </div>  
-                    
-            <label>
-                <input required="" placeholder="" type="text" class="input">
-                <span>Email</span>
-            </label>
-            
+            <div>
+                <div class="name-row">
+                        <input class="input1" type="text" name="firstname" placeholder="First Name">
                 
-            <label>
-                <input required="" placeholder="" type="tel" class="input">
-                <span>Phone</span>
-            </label>
+                        <input class="input1" type="text" name="lastname" placeholder="Last Name"> 
+                </div>
 
-            <label>
-                <input required="" placeholder="" type="password" class="input">
-                <span>Password</span>
-            </label>
+                <input class="input2" type="email" name="email" placeholder="Email"> 
+                <input class="input2" type="tel" name="Phone" placeholder="Phone"> 
+                <input class="input2" type="password" name="password" placeholder="password">
+            </div>
+
             <button class="submit">Sign up</button>
 
             <p class="signin">Already have an acount ? <a href="#">Sign in</a> </p>

@@ -43,39 +43,27 @@
 
     margin: auto;
   }
+
+  .form-img  {
+    width: 120px;
+    height: 120 px;
+    margin: auto;
+    animation: pulse 1.5s linear infinite;
+
+  }
   
   .title {
-    font-size: 28px;
+    font-size: 3.5rem;
     color: royalblue;
     font-weight: 600;
-    letter-spacing: -1px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding-left: 30px;
+    text-align: center;
+    
+  }
+
+  .title-text {
+    margin: 0;
   }
   
-  .title::before,.title::after {
-    position: absolute;
-    content: "";
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    left: 0px;
-    background-color: royalblue;
-  }
-  
-  .title::before {
-    width: 18px;
-    height: 18px;
-    background-color: royalblue;
-  }
-  
-  .title::after {
-    width: 18px;
-    height: 18px;
-    animation: pulse 1s linear infinite;
-  }
   
   .message, .signin {
     color: rgba(88, 87, 87, 0.822);
@@ -94,48 +82,39 @@
     text-decoration: underline royalblue;
   }
   
-  .name-div{
+  .name-row{
     display: flex;
+    justify-content: space-between;
     width: 100%;
-    gap: 6px;
+    
   }
-  
+
+  input{
+    padding: 15px 0 15px 5%;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+    
+  }
+
+  .input1{
+    margin-right: 0;
+    width: 190px;
+    
+  }
+
+  .input2 {
+    width: 95%;
+    margin-top: 4%;
+  }
+
   .form label {
     position: relative;
   }
   
-  .form label .input {
-    width: 100%;
-    padding: 10px 10px 20px 10px;
-    outline: 0;
-    border: 1px solid rgba(105, 105, 105, 0.397);
-    border-radius: 10px;
-  }
   
-  .form label .input + span {
-    position: absolute;
-    left: 10px;
-    top: 15px;
-    color: grey;
-    font-size: 0.9em;
-    cursor: text;
-    transition: 0.3s ease;
-  }
   
-  .form label .input:placeholder-shown + span {
-    top: 15px;
-    font-size: 0.9em;
-  }
-  
-  .form label .input:focus + span,.form label .input:valid + span {
-    top: 30px;
-    font-size: 0.7em;
-    font-weight: 600;
-  }
-  
-  .form label .input:valid + span {
-    color: green;
-  }
+
   
   .submit {
     margin: 15px 0;
@@ -163,13 +142,27 @@
   }
   
   @keyframes pulse {
-    from {
+    0% {
       transform: scale(0.9);
       opacity: 1;
     }
   
-    to {
-      transform: scale(1.8);
-      opacity: 0;
+    30% {
+      transform: scale(1.1);
+      opacity: .7;
     }
+
+    50%{
+      transform: scale(1.0);
+      opacity: .9;
+    }
+    70%{
+      transform: scale(1.1);
+      opacity: .7;
+    }
+    100%{
+      transform: scale(.9);
+      opacity: 1;
+    }
+    
   }
