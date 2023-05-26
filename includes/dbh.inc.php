@@ -3,7 +3,7 @@
 $serverName="localhost";
 $dbUserName="root";
 $dbPassword="";
-$dbName="login";
+$dbName="iwt_db_health_checkup";
 
 $conn = mysqli_connect($serverName,$dbUserName,$dbPassword,$dbName);
 

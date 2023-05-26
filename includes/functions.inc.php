@@ -1,10 +1,10 @@
 <?php
 
-function emptyInputSignup($name,$email,$password,$reppassword){
+function emptyInputSignup($firstname,$lastname,$email,$password,$reppassword){
 
     $result=null;
  
-    if(empty($name)||empty($email)||empty($password)||empty($reppassword)){
+    if(empty($firstname)||empty($lastname)||empty($email)||empty($password)||empty($reppassword)){
         $result=true;
     }else{
         $result=false;
@@ -23,11 +23,16 @@ function emptyInputLogin($email,$pwd){
     return $result;
 }
 
-function invalidNameSignup($name){
+function invalidNameSignup($firstname,$lastname){
 
     $result=null;
  
-    if(!preg_match("/^[a-zA-Z]*$/", $name)){
+    if(!preg_match("/^[a-zA-Z]*$/", $firstname)){
+        $result=true;
+    }else{
+        $result=false;
+    }
+    if(!preg_match("/^[a-zA-Z]*$/", $lastname)){
         $result=true;
     }else{
         $result=false;
@@ -58,13 +63,13 @@ function pwdMatchInvalid($password,$reppassword){
 }
 
 function emailExist($conn,$email){
-    $sql="SELECT * FROM users WHERE Email=?;";
+    $sql="SELECT * FROM Users WHERE Email=?;";
 
     $stmt=mysqli_stmt_init($conn);
 
     if(!mysqli_stmt_prepare($stmt,$sql)){
 
-        header("location ../signup.php?error=stmtfailed");
+        header("location ../pages/signup.php?error=stmtfailed");
         exit();
     }
     mysqli_stmt_bind_param($stmt,"s",$email);
@@ -83,28 +88,28 @@ function emailExist($conn,$email){
     
 }
 
-function CreateUser($conn,$name,$email,$password){
-    $sql="INSERT INTO users (UserName, Email, pwd) VALUES (?, ?, ?);";
+function CreateUser($conn,$firstname,$lastname,$email,$phone,$password){
+    $sql="INSERT INTO Users (FirstName,LastName, Email,PhoneNumber,pwd,RoleId) VALUES (?,?,?,?,?,1);";
 
     $stmt=mysqli_stmt_init($conn);
 
     if(!mysqli_stmt_prepare($stmt,$sql)){
 
-        header("location ../signup.php?error=stmtfailed");
+        header("location ../pages/signup.php?error=stmtfailed");
         exit();
     }
     $hashpwd=password_hash($password,PASSWORD_DEFAULT);
     
-    mysqli_stmt_bind_param($stmt,"sss",$name,$email,$hashpwd);
+    mysqli_stmt_bind_param($stmt,"sssss",$firstname,$lastname,$email,$phone,$hashpwd);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../signup.php?error=none");
+    header("location: ../pages/login.php?error=none");
     exit();
 
     
 }
 function getUserInfo($conn,$id){
-    $sql="SELECT * FROM users WHERE id=?;";
+    $sql="SELECT * FROM Users WHERE id=?;";
 
     $stmt=mysqli_stmt_init($conn);
 
@@ -126,19 +131,19 @@ function LoginUser($conn,$email,$password){
 
     $users=emailExist($conn,$email);
     if($users===false){
-        header("location: ../Login.php?error=emailnotregistered");
+        header("location: ../pages/Login.php?error=emailnotregistered");
         exit();
     }
-    $pwdhash=$users["pwd"];
+    $pwdhash=$users["Pwd"];
     $chkpwd=password_verify($password,$pwdhash);
 
     if($chkpwd === false){
-        header("location: ../Login.php?error=wrongpwd");
+        header("location: ../pages/Login.php?error=wrongpwd");
         exit();
     }else if($chkpwd === true){
         session_start();
-        $_SESSION["UserId"] =$users["id"];
-        header("location: ../Dashboard.php");
+        $_SESSION["UserId"] = $users["Id"];
+        header("location: ../index.php?error=loged");
         exit();
     }
 

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale= 1.0">
-
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="../styles/signup.css">
 
         <title>Sign-Up</title>
@@ -11,7 +11,7 @@
     </head>
 
     <body>
-        
+    
         <div class="back-btn-div">
         <a href="../index.php"><button class="back-btn" type="button">
                 <lord-icon
@@ -26,7 +26,7 @@
 
         
 
-        <form class="form" action="#" method="post">
+        <form action="../includes/signup.inc.php" method="post" class="form">
             <img class="form-img" src="../images/form-heart.png">
             <div class="title">
                 <p class="title-text">Register</p>
@@ -36,17 +36,16 @@
 
             <div>
                 <div class="name-row">
-                        <input class="input1" type="text" name="firstname" placeholder="First Name">
-                
+                        <input class="input1" type="text" name="firstname" placeholder="First Name">     
                         <input class="input1" type="text" name="lastname" placeholder="Last Name"> 
                 </div>
-
                 <input class="input2" type="email" name="email" placeholder="Email"> 
-                <input class="input2" type="tel" name="Phone" placeholder="Phone"> 
-                <input class="input2" type="password" name="password" placeholder="password">
+                <input class="input2" type="tel" name="Phone" placeholder="Phone Number"> 
+                <input class="input2" type="password" name="password" placeholder="Password">
+                <input class="input2" type="password" name="reppassword" placeholder="Confirm Password">
             </div>
 
-            <button class="submit">Sign up</button>
+            <button type="submit" class="submit" name="submit">Sign up</button>
 
             <p class="signin">Already have an acount ? <a href="login.php">Sign in</a> </p>
         </form>

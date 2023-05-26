@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,17 +15,24 @@
     <div class="top">
         <a href="../index.php"><img src="../images/logo.png" width="250px" /></a>
         <div class="log">
-        <a href="signup.php"> <button>Sign up</button></a>
-        <a href="login.php"> <button>Log in</button></a>
+          <?php if(isset($_SESSION["UserId"])){?>
+            <a href="../includes/logout.inc.php"> <button>Log out</button></a>
+          <?php }else  {?>   
+            <a href="signup.php"> <button>Sign up</button></a>
+            <a href="login.php"> <button>Log in</button></a>
+          <?php }?>
         </div>
       </div>
       <div class="medium">
-        <hr />
+        
         <a href="../index.php">Home</a>
         <a href="contact.php">Contact Us</a>
         <a href="facility.php">Facilities</a>
         <a href="news.php">News</a>
-        <hr />
+        <?php if(isset($_SESSION["UserId"])){?>
+          <a href="UserDashboard.php">Dashboard</a>
+        <?php } ?>
+        
 </div>
      
       <h1>News and Events</h1>

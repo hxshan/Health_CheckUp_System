@@ -27,7 +27,7 @@
 
         
 
-        <form class="form" action="#" method="post">
+        <form class="form" action="../includes/login.inc.php" method="post">
             <img class="form-img" src="../images/form-heart.png">
             <div class="title">
                 <p class="title-text">Log In</p>
@@ -40,7 +40,7 @@
                 <input class="input2" type="password" name="password" placeholder="password">
             </div>
 
-            <button class="submit">Sign in</button>
+            <button class="submit" type="submit" name="submit">Sign in</button>
 
             <p class="signin">Don't have an acount ? <a href="signup.php">Sign up</a> </p>
         </form>

@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 ?>
 
@@ -20,8 +21,13 @@
       <div class="top">
         <a href="index.php"><img src="images/logo.png" width="250px" /></a>
         <div class="log">
-        <a href="pages/signup.php"> <button>Sign up</button></a>
-        <a href="pages/login.php"> <button>Log in</button></a>
+          
+        <?php if(isset($_SESSION["UserId"])){?>
+          <a href="includes/logout.inc.php"> <button>Log out</button></a>
+        <?php }else  {?>   
+          <a href="pages/signup.php"> <button>Sign up</button></a>
+          <a href="pages/login.php"> <button>Log in</button></a>
+        <?php }?>
         </div>
       </div>
       <div class="medium">
@@ -30,14 +36,20 @@
         <a href="pages/contact.php">Contact Us</a>
         <a href="pages/facility.php">Facilities</a>
         <a href="pages/news.php">News</a>
-        <a href="#">Dashboard</a>
-        
+        <?php if(isset($_SESSION["UserId"])){?>
+          <a href="pages/UserDashboard.php">Dashboard</a>
+        <?php } ?>
       </div>
       <div class="center">
         <h1>Welcome To our Health check-up & Diet System</h1>
         <div class="appointment-btns">
-          <a href="#">Make Appointment</a>
-          <a href="#">Get Diet Plan</a>
+          <?php if(isset($_SESSION["UserId"])){?>
+            <a href="#">Make Appointment</a>
+            <a href="#">Get Diet Plan</a>
+          <?php } else { ?>
+            <a href="pages/login.php">Make Appointment</a>
+            <a href="pages/login.php">Get Diet Plan</a>
+          <?php }?>
         </div>
        
       </div>

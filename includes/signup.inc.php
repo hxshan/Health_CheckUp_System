@@ -1,47 +1,49 @@
 <?php
 if(isset($_POST["submit"])){
-   $name = $_POST["name"];
+   $firstname = $_POST["firstname"];
+   $lastname = $_POST["lastname"];
    $email = $_POST["email"];
+   $phone = $_POST["Phone"];
    $password = $_POST["password"];
    $reppassword = $_POST["reppassword"];
 
     require_once 'dbh.inc.php';
     require_once 'functions.inc.php';
 
-    if(emptyInputSignup($name,$email,$password,$reppassword) !== false){
+    if(emptyInputSignup($firstname,$lastname,$email,$password,$reppassword) !== false){
 
-        header("location: ../signup.php?error=emptyinput");
+        header("location: ../pages/signup.php?error=emptyinput");
         exit();
     }
     
-    if(invalidNameSignup($name) !== false){
+    if(invalidNameSignup($firstname,$lastname) !== false){
 
-        header("location: ../signup.php?error=invalidname");
+        header("location: ../pages/signup.php?error=invalidname");
         exit();
     }
     
     if(invalidEmailSignup($email) !== false){
 
-        header("location: ../signup.phperror=invalidemail");
+        header("location: ../pages/signup.php?error=invalidemail");
         exit();
     }
     
     if(pwdMatchInvalid($password,$reppassword) !== false){
 
-        header("location: ../signup.php?error=passwordsdontmatch");
+        header("location: ../pages/signup.php?error=passwordsdontmatch");
         exit();
     }
     
-    if(emailExist($conn,$name) !== false){
+    if(emailExist($conn,$email) !== false){
 
-        header("location: ../signup.php?error=emailExist");
+        header("location: ../pages/signup.php?error=emailExist");
         exit();
     }
 
-    CreateUser($conn,$name,$email,$password);
+    CreateUser($conn,$firstname,$lastname,$email,$phone,$password);
 
 
 }else{
-    header("location:../signup.php");
+    header("location:../pages/signup.php?error=daas");
     exit();
 }
