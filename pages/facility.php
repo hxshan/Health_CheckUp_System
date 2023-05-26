@@ -19,10 +19,10 @@
       </div>
       <div class="medium">
         <hr />
-        <a href="../index.php"><button>Home</button></a>
-        <a href="contact.php"><button>Contact Us</button></a>
-        <a href="facility.php"><button>Facilities</button></a>
-        <a href="news.php"><button>News</button></a>
+        <a href="../index.php">Home</button></a>
+        <a href="contact.php">Contact Us</button></a>
+        <a href="facility.php">Facilities</a>
+        <a href="news.php">News</a>
         <hr />
     </div>
 

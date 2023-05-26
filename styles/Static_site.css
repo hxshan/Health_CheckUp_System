@@ -18,10 +18,13 @@ main{
     justify-content: center;
     align-items: center;
     background-image: url(../images/4113082.jpg);
+    background-repeat:no-repeat;
     background-position: center; 
+    background-size:cover;
     min-height: 700px;
-    width:100vw;
+    max-width:100vw;
     color: white;
+    overflow-x: hidden;
 }
 
 .top{
@@ -34,44 +37,49 @@ main{
 }
 .log button{
     min-height: 50px;
-    min-width: 110px;
+    min-width: 130px;
     top: 100px;
     margin-right: 50px;
     margin-top: 100px;
-    background-color:#23A0FA;
+    background-color:royalblue;
     border-radius: 15px;
     border: none;
     color: white;
     transition: 0.5s;
     font-weight: bold;
+    font-size: 1.1rem;
 }
 
 .top button:hover{
-    background-color:#15F68A;
+    background-color:#7FD858;
     cursor: pointer;
     color: black;
-}
-
-.medium button{
-    min-height: 100px;
-    min-width: 120px;
-    border: none;
-    border-radius:none;
-    background-color:#23A0FA ;
-    transition: 0.5s;
-    color:white;
-    font-weight: bold;
-}
-.medium button:hover{
-    background-color: #15F68A;
-    color: black;
-    cursor: pointer;
 }
 .medium{
-    background-color: #23A0FA;
-    overflow-x: hidden;
+    display: flex;
 }
-.medium h1{
+.medium a{
+    padding:20px 70px 20px 70px;
+    background-color:royalblue ;
+    transition: 0.5s;
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-right:2px solid #7FD858;
+}
+.medium a:hover{
+    background-color: #7FD858;
+    color: black;
+    cursor: pointer;
+    border-right:2px solid royalblue;
+}
+.medium{
+    background-color: royalblue;
+    overflow-x: hidden;
+    border: none;
+}
+/*.medium h1{
     margin-bottom: 150px;
     max-width: 450px;
     text-align: center;
@@ -79,7 +87,7 @@ main{
     font-weight: bolder;
     color: #23A0FA;
     font-family: 'Roboto Condensed', sans-serif;
-}
+}*/
 .but button{
     border-radius: 15px;
     min-width: 250px;
@@ -90,6 +98,33 @@ main{
 .but{
     align-items: center;
 }
+.appointment-btns{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    margin-top: 2rem;
+    
+
+}
+.appointment-btns a{
+    text-decoration: none;
+    padding:20px 90px 20px 90px;
+    background-color:royalblue ;
+    transition: 0.5s;
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    margin-right: 2rem;
+}
+.appointment-btns a:hover{
+    background-color: #7FD858;
+    color: black;
+    cursor: pointer;
+    
+}
+
 section{
     display: flex;
     flex-direction: column;
@@ -286,7 +321,7 @@ form h3{
 /*------------------------------------------facilities page css---------------------------------------------------------------------------------------*/
 
 .center h1{
-    color:#23A0FA;
+    color:royalblue;
     font-size: 50px;
 }
 

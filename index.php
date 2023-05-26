@@ -25,15 +25,21 @@
         </div>
       </div>
       <div class="medium">
-        <hr />
-        <a href="index.php"><button>Home</button></a>
-        <a href="pages/contact.php"><button>Contact Us</button></a>
-        <a href="pages/facility.php"><button>Facilities</button></a>
-        <a href="pages/news.php"><button>News</button></a>
-        <hr />
+        
+        <a href="index.php">Home</a>
+        <a href="pages/contact.php">Contact Us</a>
+        <a href="pages/facility.php">Facilities</a>
+        <a href="pages/news.php">News</a>
+        <a href="#">Dashboard</a>
+        
       </div>
       <div class="center">
-        <h1>Welcome To our Health check-up & Diet System</h1>  
+        <h1>Welcome To our Health check-up & Diet System</h1>
+        <div class="appointment-btns">
+          <a href="#">Make Appointment</a>
+          <a href="#">Get Diet Plan</a>
+        </div>
+       
       </div>
       <section>
         <h1 class="title">FAQ</h1>

@@ -66,7 +66,6 @@
   
   .message {
     font-size: 1.2rem;
-    
     background: -webkit-linear-gradient(#7fd858, royalblue);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
