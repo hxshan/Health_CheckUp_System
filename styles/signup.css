@@ -66,8 +66,8 @@
   
   .message {
     font-size: 1.2rem;
-    background: -webkit-linear-gradient(#7fd858, royalblue);
-   
+    font-weight: 600;
+    color:#7FD858;
     margin-bottom: 0;
   }
   

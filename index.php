@@ -1,6 +1,9 @@
 <?php
 session_start();
-
+require_once 'includes/dbh.inc.php';
+require_once 'includes/functions.inc.php';
+if(isset($_SESSION["UserId"])){
+$userInfo=getUserInfo($conn,$_SESSION["UserId"]);}
 ?>
 
 
@@ -23,6 +26,13 @@ session_start();
         <div class="log">
           
         <?php if(isset($_SESSION["UserId"])){?>
+          <div class="prof-info">
+            <?php echo "<p>".$userInfo["FirstName"]." ".$userInfo["LastName"]."</p>";?>
+            <div class="prof-img">
+              <img src="images/pfp.jpg" alt="profle pic">
+            </div>
+            
+          </div>
           <a href="includes/logout.inc.php"> <button>Log out</button></a>
         <?php }else  {?>   
           <a href="pages/signup.php"> <button>Sign up</button></a>

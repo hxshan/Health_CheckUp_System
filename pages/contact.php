@@ -37,7 +37,7 @@ session_start();
 </div>
       <div class="container">
         <div class="contact">
-          <h1>Contact Forum</h1>
+          <h1>Contact Us</h1>
           <form>
             <h3>Name</h3>
             <input type="text" id="fname" name="fname" placeholder="First Name" />
@@ -64,12 +64,7 @@ session_start();
               placeholder="subject"
             />
             <h3>Message</h3>
-            <input
-              type="text"
-              id="message"
-              name="message"
-              placeholder="message"
-            />
+            <textarea id="message" name="message"cols="30" rows="10" placeholder="Type Message"></textarea>
             <input id="send" type="submit" value="send" />
           </form>
         </div>
@@ -80,10 +75,10 @@ session_start();
             <p>Fax :(+94)30 1234567</p>
             <p>Email :health@gmail.com</p>
             <div class="icons">
-            <img src="images/instagram.svg" width="40px" />
-            <img src="images/facebook.svg" width="40px" />
-            <img src="images/twitter.svg" width="40px" />
-            <img src="images/linkedin.svg" width="40px" />
+            <img src="../images/instagram.svg" width="40px" />
+            <img src="../images/facebook.svg" width="40px" />
+            <img src="../images/twitter.svg" width="40px" />
+            <img src="../images/linkedin.svg" width="40px" />
             </div>
           </div>
           <div class="location">

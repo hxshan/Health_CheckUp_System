@@ -11,7 +11,21 @@ main{
     font-family: 'Arimo', sans-serif;
     background-color: white;
 }
-
+.prof-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-height: 3rem;
+}
+.prof-img{
+    max-width: 2rem;
+    height: auto;
+    margin-left: 1rem;
+}
+.prof-img img{
+    height: 100%;
+    width: 100%;
+}
 .center{
     display: flex;
     flex-direction: column;
@@ -196,21 +210,21 @@ svg{
 }
 
 .contact{
-    border: 5px solid #054675;
+    border: 2px solid black;
     max-height: 800px;
     min-width: 500px;
-    border-radius: 20px;
+    border-radius: 15px;
     align-items: center;
     margin-top: 100px;
     color:black;
 }
 
 .info{
-    border: 5px solid #054675;
+    border: 2px solid black;
     min-height: 300px;
     min-width: 500px;
     margin-left: 200px;
-    border-radius: 20px;
+    border-radius: 15px;
     margin-top: 100px;
     padding: 30px 0px 0px 60px;
     color:black;
@@ -218,12 +232,12 @@ svg{
 .location{
     margin-left: 200px;
     margin-top: 100px;
-    border: 5px solid #054675;
-    border-radius: 20px;
+    border: 2px solid black;
+    border-radius: 15px;
 }
 
 .location iframe{
-    border-radius: 20px;
+    border-radius:15px;
 }
 
 .contact h1{
@@ -237,48 +251,53 @@ form{
 }
 
 form #fname{
-    border-radius: 8px;
-    border:5px solid #054675;
+    border-radius: 7px;
+    border:2px solid black;
     height: 40px;
     width: 200px;
     margin-top: 20px;
-    text-align: center;
+    padding-left: 1rem; 
 }
 form #lname{
-    border-radius: 8px;
+    border-radius: 7px;
     height: 40px;
     width: 200px;
-    border:5px solid #054675;
-    text-align: center;
+    border:2px solid black;
+    padding-left: 1rem; 
 }
 form #email{
-    border-radius: 8px;
+    border-radius: 7px;
     height: 40px;
     width: 405px;
     margin-top: 20px;
-    border:5px solid #054675;
+    border:2px solid black;
+    padding-left: 1rem; 
 }
 form #phone{
     border-radius: 8px;
     height: 40px;
     width: 405px;
     margin-top: 20px;
-    border:5px solid #054675;
+    border:2px solid black;
+    padding-left: 1rem; 
 }
 form #subject{
     border-radius: 8px;
     height: 40px;
     width: 405px;
     margin-top: 20px;
-    border:5px solid #054675;
+    border:2px solid black;
+    padding-left: 1rem; 
 }
 form #message{
     border-radius: 8px;
     height: 150px;
     width: 405px;
     margin-top: 20px;
-    border:5px solid #054675;
+    border:2px solid black;
+    padding-left: 1rem; 
 }
+
 form #send{
     border-radius: 8px;
     height: 40px;
