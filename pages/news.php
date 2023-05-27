@@ -19,7 +19,7 @@ if(isset($_SESSION["UserId"])){
     <main>
     <div class="top">
         <div class="logo">
-        <a href="index.php"><img id="logo"src="../images/logo.png"/></a>
+        <a href="index.php"><img id="logo"src="../images/logo.jpg"/></a>
         </div>
         
         <div class="log">

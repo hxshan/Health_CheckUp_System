@@ -17,7 +17,6 @@ if(document.querySelector(".dropdown-container")!==null){
 
 
 
-
 faqs.forEach((faq) => {
     faq.addEventListener("click", () =>{
         faq.classList.toggle("active");
