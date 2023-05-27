@@ -1,5 +1,10 @@
 <?php
-session_start();
+  session_start();
+  require_once '../includes/dbh.inc.php';
+  require_once '../includes/functions.inc.php';
+  if(isset($_SESSION["UserId"])){
+    $userInfo=getUserInfo($conn,$_SESSION["UserId"]);
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,13 +19,32 @@ session_start();
     <main>
     
     <div class="top">
-        <a href="../index.php"><img src="../images/logo.png" width="250px" /></a>
+        <div class="logo">
+        <a href="index.php"><img id="logo"src="../images/logo.png"/></a>
+        </div>
+        
         <div class="log">
           <?php if(isset($_SESSION["UserId"])){?>
-            <a href="../includes/logout.inc.php"> <button>Log out</button></a>
+            <div class="top-right">
+              <div class="prof-info">
+                <?php echo "<p>". $userInfo["FirstName"]." ".$userInfo["LastName"]."</p>"?>
+                <div class="prof-img">
+                  <img src="../images/pfp.jpg" alt="profle pic">
+                </div>
+              </div>
+              <div class="dropdown-container closed">
+                  <div class="dropdown-content">
+                      <a href="#">Profile</a>
+                      <a href="UserDashboard.php">Dashboard</a>
+                      <a href="../includes/logout.inc.php">Log out</a>
+                  </div>
+              </div>
+            
+            </div>
+            
           <?php }else  {?>   
-            <a href="signup.php"> <button>Sign up</button></a>
-            <a href="login.php"> <button>Log in</button></a>
+            <a href="pages/signup.php"> <button>Sign up</button></a>
+            <a href="pages/login.php"> <button>Log in</button></a>
           <?php }?>
         </div>
       </div>
