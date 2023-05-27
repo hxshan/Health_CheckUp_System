@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Roboto+Condensed:wght@700&display=swap');
+
+*
+{
+    padding: 0;
+    margin: 0;
+}
+main{
+    margin-left: 200px;
+}
+.logo
+{
+    max-width: 100vh;
+    max-height: 100vh;
+}
+
+.header
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: royalblue;
+    height:75px; 
+    width: 100%; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+}
+
+.full
+{
+    display: flex;
+    margin-right: 10px;
+    align-items: center;
+    
+}
+
+.fulln
+{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+}
+
+.fulln>a
+{
+    text-decoration: none;
+    color: white;
+    
+}
+
+.Navibar
+{
+  height: 100%; 
+  width: 200px; 
+  float: left;
+  background-color: #111; 
+  overflow-x: hidden; 
+  position: fixed;
+  
+}
+
+.nav-item{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    background-color: royalblue;
+    border-bottom: 2px solid;
+}
+.nav-item img{
+    margin:0 15px 0 10px;
+}
+.nav-item a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    width: 200px;
+}
+.nav-item a:hover{
+    background-color: #7FD858;
+    color: white;
+}
+.navidown{
+   position: fixed;
+   bottom: 0;
+   width: 200px;
+}
+
+/*li
+{
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #23A0FA;
+    max-width: 150px;
+    border: 2px solid solid black;
+}
+
+li > a
+{
+    text-decoration: none;
+    color: white;
+}
+
+li:hover
+{
+    background-color:#15F68A ;
+    cursor: pointer;
+}
+
+li>a:hover
+{
+    color: black;
+}
+
+.nfull:hover
+{
+    background-color: #15F68A;
+    cursor: pointer;
+
+}
+
+.fulln:hover
+{
+    background-color: #15F68A;
+    cursor: pointer;
+
+}
+.Navibar
+{
+    position: fixed;
+    height: 100vh;
+}
+*/

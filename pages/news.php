@@ -19,7 +19,7 @@ if(isset($_SESSION["UserId"])){
     <main>
     <div class="top">
         <div class="logo">
-        <a href="index.php"><img id="logo"src="../images/logo.png"/></a>
+        <a href="index.php"><img id="logo"src="../images/logo.jpg"/></a>
         </div>
         
         <div class="log">
@@ -42,8 +42,8 @@ if(isset($_SESSION["UserId"])){
             </div>
             
           <?php }else  {?>   
-            <a href="pages/signup.php"> <button>Sign up</button></a>
-            <a href="pages/login.php"> <button>Log in</button></a>
+            <a href="signup.php"> <button>Sign up</button></a>
+            <a href="login.php"> <button>Log in</button></a>
           <?php }?>
         </div>
       </div>
