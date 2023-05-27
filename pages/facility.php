@@ -43,8 +43,8 @@
             </div>
             
           <?php }else  {?>   
-            <a href="pages/signup.php"> <button>Sign up</button></a>
-            <a href="pages/login.php"> <button>Log in</button></a>
+            <a href="signup.php"> <button>Sign up</button></a>
+            <a href="login.php"> <button>Log in</button></a>
           <?php }?>
         </div>
       </div>
