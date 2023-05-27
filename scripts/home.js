@@ -10,7 +10,6 @@ if(document.querySelector(".dropdown-container")!==null){
         }else{
             dropdown.classList.add("closed");
         }
-    
     })
 }
 
