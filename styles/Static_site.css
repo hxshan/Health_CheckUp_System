@@ -110,15 +110,6 @@ main{
     overflow-x: hidden;
     border: none;
 }
-/*.medium h1{
-    margin-bottom: 150px;
-    max-width: 450px;
-    text-align: center;
-    font-size: 50px;
-    font-weight: bolder;
-    color: #23A0FA;
-    font-family: 'Roboto Condensed', sans-serif;
-}*/
 .but button{
     border-radius: 15px;
     min-width: 250px;
