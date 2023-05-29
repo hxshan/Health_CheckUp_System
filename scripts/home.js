@@ -1,9 +1,11 @@
 const faqs = document.querySelectorAll(".faq");
 if(document.querySelector(".prof-img")!==null){
-    const prof_btn=document.querySelector(".prof-img");
+    var prof_btn=document.querySelector(".prof-img");
 }
+
+console.log(document.querySelector(".dropdown-container"));
 if(document.querySelector(".dropdown-container")!==null){
-    const dropdown=document.querySelector(".dropdown-container");
+    var dropdown=document.querySelector(".dropdown-container");
     prof_btn.addEventListener("click",()=>{
         if (dropdown.classList.contains("closed")){
             dropdown.classList.remove("closed");

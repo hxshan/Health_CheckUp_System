@@ -1,5 +1,12 @@
 
+<?php
 
+  require_once '../includes/dbh.inc.php';
+  require_once '../includes/functions.inc.php';
+  $userInfo=getUserInfo($conn,$_SESSION["UserId"]);
+  $role=$userInfo["RoleId"];
+
+?>
 <div class="header">
     <div class="logo">
         <img src="../images/logo.jpg"  height="75px" width="200">
@@ -21,7 +28,6 @@
 <div class="Navibar">
     <div class="naviup">
         <div class="nav-item">
-            
             <a href="#"><img src="../images/dashboard-64.png" height="45px" width="45px">Dashboard</a>
         </div>
         <div class="nav-item">
@@ -31,17 +37,22 @@
         <div class="nav-item">
             <a href="#"><img src="../images/report-64.png" height="45px" width="45px">Reports</a>
         </div>
+        <?php if($role==1 || $role==2){?>
         <div class="nav-item">
-        
             <a href="#"> <img src="../images/diet-64.png" height="45px" width="45px">Diet Plans</a>
         </div>
+        <?php }?>
+        <?php if($role==3){?>
         <div class="nav-item">
             <a href="#"><img src="../images/patients-64.png" height="45px" width="45px">Patients</a>
         </div>
+        <?php }?>
+        <?php if($role==4){?>
         <div class="nav-item">
             <a href="#"><img src="../images/staff-64.png" height="45px" width="45px">Staff</a>
         </div>
     </div>
+    <?php }?>
 
     <div class="navidown">
             <div class="nav-item">
