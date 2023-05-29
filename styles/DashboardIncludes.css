@@ -32,6 +32,7 @@
     margin-right: 10px;
     align-items: center;
     
+    
 }
 
 .fulln
@@ -39,12 +40,14 @@
     display: flex;
     flex-direction:row;
     align-items: center;
+    margin-left: 20px;
 }
 
 .fulln>a
 {
     text-decoration: none;
     color: white;
+    margin-left: 10px;
     
 }
 

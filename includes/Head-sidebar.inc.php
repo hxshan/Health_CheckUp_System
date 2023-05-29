@@ -7,10 +7,13 @@
   $role=$userInfo["RoleId"];
 
 ?>
+
+
 <div class="header">
     <div class="logo">
-        <img src="../images/logo.jpg"  height="75px" width="200">
+        <img src="../images/Logotxt.png"  height="75px" width="200">
     </div>
+
     <div class="full">
         <div class="nfull">
             <a href="#"><img src="../images/notification-64.png"  height="40px"width="40px"></a>
@@ -23,8 +26,9 @@
           
         </div>
     </div>
-
 </div>
+
+
 <div class="Navibar">
     <div class="naviup">
         <div class="nav-item">
