@@ -55,6 +55,9 @@
     <?php }?>
 
     <div class="navidown">
+    <div class="nav-item">
+            <a href="../index.php"><img src="../images/Back-Arrow.png" height="45px" width="45px">Back to Home</a>
+        </div>
             <div class="nav-item">
                 <a href="#"><img src="../images/support-60.png" height="45px" width="45px">Support</a>
             </div>

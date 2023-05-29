@@ -1,4 +1,5 @@
 const faqs = document.querySelectorAll(".faq");
+console.log(document.querySelector(".dropdown-container"));
 if(document.querySelector(".prof-img")!==null){
     var prof_btn=document.querySelector(".prof-img");
 }

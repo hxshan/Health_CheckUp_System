@@ -12,11 +12,10 @@ session_start();
     <title>Dashboard</title>
 </head>
 <body>
-    <?php
-        include "../includes/loggedHeader.php";
-        
-    ?>
     <main>
+    <?php
+        include "../includes/Head-sidebar.inc.php";
+    ?>
         <h1>Dashboard works!</h1>
         <a href="../includes/logout.inc.php">Logout</a>
     </main>
