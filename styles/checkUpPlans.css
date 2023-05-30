@@ -3,12 +3,15 @@ padding: 0px;}
 
 .title1{
     background-color: aqua;
-    max-width: 200px;
-    min-height: 300px;
+    width: 300px;
+    height: 370px;
     text-align: center;
 }
 .title1 h2{
 margin-top: 15px;
+}
+.title1 img{
+    width:300px;
 }
 .title1 p{
     margin-top: 10px;
@@ -21,3 +24,9 @@ margin-top: 15px;
     border: none;
     background-color: royalblue;
 }
+.wrapper {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    gap: 10px;
+    
+  }

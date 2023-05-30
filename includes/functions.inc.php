@@ -147,6 +147,14 @@ function LoginUser($conn,$email,$password){
         exit();
     }
 
-
 } 
+
+
+function getCheckUpPlans($conn){
+    $sql="SELECT * FROM checkupplan";
+    
+    $result= mysqli_query($conn,$sql);
+    return $result;
+
+}
 

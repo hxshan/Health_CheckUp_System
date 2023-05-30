@@ -32,7 +32,7 @@
 <div class="Navibar">
     <div class="naviup">
         <div class="nav-item">
-            <a href="#"><img src="../images/dashboard-64.png" height="45px" width="45px">Dashboard</a>
+            <a href="../pages/UserDashboard.php"><img src="../images/dashboard-64.png" height="45px" width="45px">Dashboard</a>
         </div>
         <div class="nav-item">
            
