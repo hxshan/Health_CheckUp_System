@@ -28,7 +28,7 @@ if(isset($_SESSION["UserId"])){
                 <img src="../images/624111.jpg">
                 <?php echo "<h2>".$row["Name"]."</h2>" ?>
                 <?php echo "<p>".$row["Description"]."</p>";?>
-                <a class="view">View more</a>
+                <?php echo "<a href=\"CheckUpDetail.php?chkId=".$row["Id"]."\""."> View More </a>"?>
             </div>
        <?php } ?>
        </div>

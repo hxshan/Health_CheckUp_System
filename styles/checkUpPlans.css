@@ -30,3 +30,12 @@ margin-top: 15px;
     gap: 10px;
     
   }
+.checkup-info-con{
+    display: flex;
+    flex-direction: column;
+    max-width:30rem;
+}   
+.checkup-img img{
+    height: 100%;
+    width: 100%;
+}
