@@ -47,8 +47,15 @@
 {
     text-decoration: none;
     color: white;
-    margin-left: 10px;
+   
     
+}
+.fulln>a#pfp{
+margin-left: 10px;
+}
+
+.fulln>a#name{
+    margin:0 10px 0 30px;
 }
 
 .Navibar
@@ -84,6 +91,7 @@
     background-color: #7FD858;
     color: white;
 }
+
 .navidown{
    position: fixed;
    bottom: 0;

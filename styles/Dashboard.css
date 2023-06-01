@@ -1,0 +1,32 @@
+.content-container{
+margin-left: 210px;
+}
+.closed{
+    display: none;
+}
+.dropdown-container{
+   min-height: 100px;
+   width: 150px;
+   position: absolute;
+   background-color:rgba(211, 208, 208,50%);
+   margin-right: 1rem;
+   transform: translateX(30px);
+}
+.dropdown-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1;
+    
+}
+.dropdown-content a{
+    text-decoration: none;
+    width: 150px;
+    text-align: center;
+    padding:0.5rem 0;
+}
+.dropdown-content a:hover{
+    background-color: #7FD858;
+    color: black;
+}

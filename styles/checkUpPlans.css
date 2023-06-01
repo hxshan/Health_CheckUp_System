@@ -39,3 +39,9 @@ margin-top: 15px;
     height: 100%;
     width: 100%;
 }
+.test{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
