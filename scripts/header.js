@@ -1,5 +1,5 @@
 
-var prof_btn=document.querySelector(".full");
+var prof_btn=document.querySelector(".fulln");
 
 var dropdown=document.querySelector(".dropdown-container");
 prof_btn.addEventListener("click",()=>{
