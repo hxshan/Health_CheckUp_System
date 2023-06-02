@@ -61,7 +61,11 @@
         <?php } ?>
       </div>
       <div class="center">
-        <h1>Welcome To our Health check-up & Diet System</h1>
+        <div class="left">
+          <img src="images/home-img.svg" width="700px" >
+        </div>
+        <div class="right">
+        <h1>Feeling busy,get your health checked up right now!!</h1>
         <div class="appointment-btns">
           <?php if(isset($_SESSION["UserId"])){?>
             <a href="pages/checkUpPlans.php">Make Appointment</a>
@@ -70,6 +74,7 @@
             <a href="pages/login.php">Make Appointment</a>
             <a href="pages/login.php">Get Diet Plan</a>
           <?php }?>
+          </div>
         </div>
        
       </div>
@@ -169,10 +174,10 @@
         </div>
       </section>
       <div class="share">
-      <img src="images/instagram.svg" width="40px" />
-          <img src="images/facebook.svg" width="40px" />
-          <img src="images/twitter.svg" width="40px" />
-          <img src="images/linkedin.svg" width="40px" />
+          <button><img src="images/instagram.svg" width="40px" /></button>
+          <button><img src="images/facebook.svg" width="40px" /></button>
+          <button><img src="images/twitter.svg" width="40px" /></button>
+          <button><img src="images/linkedin.svg" width="40px" /></button>
           </div>
     </main>
     <script src="scripts/home.js"></script>
