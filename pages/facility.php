@@ -60,10 +60,14 @@
         
     </div>
 
-      <div class="center">
-        <h1>Our Facilities</h1>
-      </div>
-      <div class="bottom">
+      <div class="center-fac">
+        <h1>Our <span>Facilities</span></h1>
+        <div class="container-fac">
+        <div class="left-fac">
+        <img src="../images/about-img.svg">
+        </div>
+        <div class="right-fac">
+          <div class="right-up">
         <div class="hos">
           <h2>Hospitels</h2>
           <img src="../images/hospital-regular.svg" width="40px" />
@@ -79,10 +83,11 @@
           <p>
             Diagnostic Services facilitates the provision of timely,
             cost-effective, and high quality diagnostic care in safe and secure
-            environments. It includes the clinical services of Pathology and
-            Laboratory Medicine, Radiology, and Nuclear Medicine .
+            environments.
           </p>
         </div>
+        </div>
+        <div class="right-bot">
         <div class="well">
           <h2>Wellness Clinics</h2>
           <img src="../images/house-chimney-medical-solid.svg" width="40px" />
@@ -100,13 +105,42 @@
             and consultative services
           </p>
         </div>
+        </div>
+        </div>
+        </div>
       </div>
-      <div class="share">
-        <img src="../images/instagram.svg" width="40px" />
-            <img src="../images/facebook.svg" width="40px" />
-            <img src="../images/twitter.svg" width="40px" />
-            <img src="../images/linkedin.svg" width="40px" />
-            </div>
+      <div class="bottom">
+        <h1>Our <span>Services</span></h1>
+        <div class="serv">
+        <div class="free-chk">
+          <h2>Check-up</h2>
+          <img src="../images/user-check-solid.svg" width="50px">
+          <ul>
+            <li>Free appointment for new members</li>
+            <li>Free doctor reviews</li>
+            <li>No delays</li>
+          </ul>
+        </div>
+        <div class="ambul">
+        <h2>Ambulance</h2>
+          <img src="../images/truck-medical-solid.svg" width="50px">
+          <ul>
+            <li>Fastest and safest vehicals</li>
+            <li>5 to 10 mins arival time to spot</li>
+            <li>A doctor is provided</li>
+          </ul>
+        </div>
+        <div class="expert">
+        <h2>Doctor</h2>
+          <img src="../images/user-doctor-solid.svg" width="40px">
+          <ul>
+            <li>Profesional and skilled doctors</li>
+            <li>Every doctor is tested</li>
+            <li>20 to 30 years experience</li>
+          </ul>
+        </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>
