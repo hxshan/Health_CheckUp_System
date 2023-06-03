@@ -44,7 +44,11 @@ main{
     overflow-x: hidden;
     margin-top: 50px;
 }
-
+.center h1{
+    color: black;
+    font-size: 50px;
+    text-shadow: 3px 3px 4px rgb(138, 138, 138);
+}
 .top{
     display: flex;
     flex-direction: row;
@@ -131,7 +135,7 @@ main{
 .right h1{
     width: 500px;
     text-align: left;
-    color: white;
+    color: black;
     margin-bottom: 90px;
 }
 .right{
@@ -178,6 +182,7 @@ section{
     text-align: center;
 }
 
+
 .question{
     display: flex;
     flex-direction: row;
@@ -215,7 +220,7 @@ svg{
 .title{
     font-size: 50px;
     margin-bottom: 10px;
-    color: black;
+    color: royalblue;
 }
 
 .share{
@@ -277,49 +282,57 @@ svg{
 }
 /*------------------------------------------contact page css---------------------------------------------------------------------------------------*/
 
-.container{
+.location{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.location iframe{
+    width:900px;
+    border-radius: 20px;
+    box-shadow: 8px 8px 20px royalblue;
+}
+
+.box{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    min-height: 150vh;
+    margin-top: 100px;
+    height: 900px;
 }
-
+.con-img img{
+    width: 900px;
+    height: 900px;
+}
 .contact{
-    border: 2px solid black;
-    max-height: 800px;
-    min-width: 500px;
-    border-radius: 15px;
-    align-items: center;
-    margin-top: 100px;
-    color:black;
+    border:5px solid royalblue ;
+    border-radius: 20px;
+    width: 600px;
+    height: 800px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    box-shadow: 10px 10px 15px rgb(115, 147, 241);
+    margin-right: 30px;
+    color: royalblue;
 }
-
-.info{
-    border: 2px solid black;
-    min-height: 300px;
-    min-width: 500px;
-    margin-left: 200px;
-    border-radius: 15px;
-    margin-top: 100px;
-    padding: 30px 0px 0px 60px;
-    color:black;
-}
-.location{
-    margin-left: 200px;
-    margin-top: 100px;
-    border: 2px solid black;
-    border-radius: 15px;
-}
-
-.location iframe{
-    border-radius:15px;
-}
-
 .contact h1{
     text-align: center;
     font-size: 50px;
-    margin-top: 20px;
 }
+
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    margin-top: -50px;
+}
+
+
+
+
 form{
     font-size: 20px;
     margin-left: 50px;
@@ -375,16 +388,16 @@ form #message{
 
 form #send{
     border-radius: 8px;
-    height: 40px;
+    height: 30px;
     width: 100px;
-    position: relative;
-    top: 110px;
-    right: 20px;
     cursor: pointer;
     background-color: #23A0FA;
     color: white;
     border: none;
     transition: 0.5s;
+    position: relative;
+    top: 15px;
+    left: 15px;
 }
 form #send:hover{
     background-color: #15F68A;
@@ -395,37 +408,68 @@ form h3{
     margin-top: 20px;
 }
 
+
 .info h2{
     font-size: 50px;
+    text-shadow: 3px 3px 4px rgb(138, 138, 138);
 }
 .info p{
     font-size: large;
     padding-top: 15px;
+    text-shadow: 3px 3px 4px rgb(138, 138, 138);
 }
 .info .icons{
-    margin-top: 20px;
-    margin-left: 30px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    max-width: 400px;
+     height: 100px;
+    width: 400px;
+    margin-top: 30px;
 }
-.info .icons img{
-    margin-left: 50px;
+.icons button{
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    transition: 0.5s;
 }
+
+.icons button:hover{
+    background-color: #63fa22;
+    box-shadow: 2px 2px 15px #63fa22;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
 
 /*------------------------------------------facilities page css---------------------------------------------------------------------------------------*/
 
-.center h1{
-    color: black;
-    font-size: 50px;
-    text-shadow: 3px 3px 4px rgb(138, 138, 138);
-}
 
-.bottom{
+.container-fac{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    min-height: 50vh;
-    margin-top: 100px;
+    justify-content: center;
+    max-height: 800px;
+    margin-top: 50px;
+}
+.center-fac h1{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 70px;
+    color: royalblue;
+    text-shadow: 3px 3px 4px rgb(115, 147, 241);
+}
+span{
+    color: #63fa22 ;
+    text-shadow: 3px 3px 4px #4cbe1b;
+}
+.right-fac{
+    display: flex;
+    flex-direction: row;
+}
+.left-fac img{
+    width: 800px;
 }
 .hos h2{
     margin-top: 30px;
@@ -440,20 +484,25 @@ form h3{
 }
 .hos{
     text-align: center;
-    max-width: 350px;
-    max-height: 350px;
-    border:5px solid #054675;
+    width: 350px;
+    height: 350px;
+    border:5px solid royalblue;
     padding: 10px;
     border-radius: 20px;
-    
+    box-shadow: 8px 8px 10px rgb(115, 147, 241);
+    margin: 20px;
+    color: royalblue;
 }
 .dia{
     text-align: center;
-    max-width: 350px;
-    max-height: 350px;
-    border:5px solid #054675;
+    width: 350px;
+    height: 350px;
+    border:5px solid royalblue;
     padding: 10px;
     border-radius: 20px;
+    margin: 20px;
+    box-shadow: 8px 8px 10px rgb(115, 147, 241);
+    color: royalblue;
 }
 .dia h2{
     margin-top: 30px;
@@ -469,11 +518,14 @@ form h3{
 }
 .well{
     text-align: center;
-    max-width: 350px;
-    max-height: 350px;
-    border:5px solid #054675;
+    width: 350px;
+    height: 350px;
+    border:5px solid royalblue;
     padding: 10px;
     border-radius: 20px;
+    margin: 20px;
+    box-shadow: 8px 8px 10px rgb(115, 147, 241);
+    color: royalblue;
 }
 .well h2{
     margin-top: 30px;
@@ -488,11 +540,14 @@ form h3{
 }
 .lab{
     text-align: center;
-    max-width: 350px;
-    max-height: 350px;
-    border:5px solid #054675;
+    width: 350px;
+    height: 350px;
+    border:5px solid royalblue;
     padding: 10px;
     border-radius: 20px;
+    margin: 20px;
+    box-shadow: 8px 8px 10px rgb(115, 147, 241);
+    color: royalblue;
 }
 .lab h2{
     margin-top: 30px;
@@ -506,19 +561,131 @@ form h3{
     width: 80px;
     margin-top: 50px;
 }
+.serv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+}
+.bottom{
+    height: 70vh;
+    margin-top: 80px;
+}
+.bottom h1{
+    text-align: center;
+    font-size: 50px;
+    color: royalblue;
+    text-shadow: 3px 3px 4px rgb(115, 147, 241);
+}
+.free-chk{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 300px;
+    border: 5px solid royalblue;
+    list-style-position: inside;
+    line-height:180%;
+    margin: 50px;
+    border-radius: 20px;
+    transition: 0.5s;
+    color: royalblue;
+}
+.free-chk:hover{
+    font-size: 20px;
+    height: 280px;
+    width: 350px;
+    transition: 0.5s;
+    border-color: #63fa22;
+    box-shadow: 0px 0px 15px  #4cbe1b;
+    color: #5bce2a;
+}
+.free-chk h2{
+    margin-bottom: 20px;
+}
+.ambul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 300px;
+    border: 5px solid royalblue;
+    list-style-position: inside;
+    line-height:180%;
+    margin: 50px;
+    border-radius: 20px;
+    transition: 0.5s;
+    color: royalblue;
+}
+.ambul:hover{
+    font-size: 20px;
+    height: 280px;
+    width: 320px;
+    transition: 0.5s;
+    border-color: #63fa22;
+    box-shadow: 0px 0px 15px  #4cbe1b;
+    color: #5bce2a;
+}
+.ambul h2{
+    margin-bottom: 20px;
+}
+.expert{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 300px;
+    border: 5px solid royalblue;
+    list-style-position: inside;
+    line-height:180%;
+    margin: 50px;
+    border-radius: 20px;
+    transition: 0.5s;
+    color: royalblue;
+    
+}
+.expert:hover{
+    font-size: 20px;
+    height: 280px;
+    width: 320px;
+    transition: 0.5s;
+    border-color: #63fa22;
+    box-shadow: 0px 0px 15px  #4cbe1b;
+    color: #5bce2a;
+}
+.expert h2{
+    margin-bottom: 20px;
+}
+ul{
+    margin-top:10px ;
+}
 /*------------------------------------------news page css---------------------------------------------------------------------------------------*/
 
+h1{
+    text-align: center;
+    font-size: 70px;
+    margin-top: 40px;
+    color: royalblue;
+    text-shadow: 3px 3px 4px rgb(115, 147, 241)
+}
 .loc{
     max-width: 400px;
     min-height: 400px;
     text-align: center;
-    background-color: #23A0FA;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 5px solid royalblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 5px 10px rgb(64, 75, 219)
 }
 .loc p{
     padding-top: 20px;
+    width: 300px;
     
 }
 
@@ -527,56 +694,83 @@ form h3{
     max-width: 400px;
     min-height: 400px;
     text-align: center;
-    background-color: #23A0FA;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 5px solid royalblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 5px 10px rgb(64, 75, 219)
+}
+.Achev p{
+    padding-top: 20px;
+    width: 300px;
 }
 .rev{
     max-width: 400px;
     min-height: 400px;
     text-align: center;
-    background-color: #23A0FA;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    border: 5px solid royalblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 5px 10px rgb(64, 75, 219)
 }
 .rev p{
     padding-top: 20px;
+    width: 300px;
     
 }
 .doc{
     max-width: 400px;
     min-height: 400px;
     text-align: center;
-    background-color: #23A0FA;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    border: 5px solid royalblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 5px 10px rgb(64, 75, 219)
 }
 .doc p{
     padding-top: 20px;
+    width: 300px;
 }
 .equi{
     max-width: 400px;
     min-height: 400px;
     text-align: center;
-    background-color: #23A0FA;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    border: 5px solid royalblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 5px 10px rgb(64, 75, 219)
 }
 .equi p{
     padding-top: 20px;
+    width: 300px;
     
 }
 .cel{
     max-width: 400px;
     min-height: 400px;
     text-align: center;
-    background-color: #23A0FA;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    border: 5px solid royalblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 5px 10px rgb(64, 75, 219)
 }
 .cel p{
     padding-top: 20px;
+    width: 300px;
     
 }
 .new{
@@ -600,5 +794,33 @@ form h3{
     text-align: center;
     margin-bottom: 30px;
     font-weight: bolder;
-    font-size: 30px;
+    font-size: 40px;
+    color: royalblue;
+}
+.last{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+.new-icon{
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.new-icon button{
+    background-color: white;
+    border: none;
+    width:70px;
+    height: 70px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.new-icon button:hover{
+    background-color: #63fa22;
+    cursor: pointer;
+    box-shadow: 2px 2px 15px #63fa22;
+    transition: 0.5s;
 }

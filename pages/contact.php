@@ -60,6 +60,21 @@
         <?php } ?>
 </div>
       <div class="container">
+      <div class="location">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12671.607067819505!2d79.85332911024612!3d6.923960700464002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2596aaa8742d9%3A0xced655398fd4d621!2sSLIIT%20Metropolitan%20Campus!5e0!3m2!1sen!2slk!4v1684504938539!5m2!1sen!2slk"
+              width="600"
+              height="390"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="box">
+            <div class="con-img">
+              <img src="../images/book-img.svg" >
+        </div>
         <div class="contact">
           <h1>Contact Us</h1>
           <form>
@@ -92,31 +107,19 @@
             <input id="send" type="submit" value="send" />
           </form>
         </div>
-        <div class="right">
+        </div>
           <div class="info">
             <h2>Contact info</h2>
             <p>General Line :(+94)33 1234567</p>
             <p>Fax :(+94)30 1234567</p>
-            <p>Email :health@gmail.com</p>
+            <p>Email :checkupz@gmail.com</p>
             <div class="icons">
-            <img src="../images/instagram.svg" width="40px" />
-            <img src="../images/facebook.svg" width="40px" />
-            <img src="../images/twitter.svg" width="40px" />
-            <img src="../images/linkedin.svg" width="40px" />
-            </div>
+          <button><img src="../images/instagram.svg" width="40px" /></button>
+          <button><img src="../images/facebook.svg" width="40px" /></button>
+          <button><img src="../images/twitter.svg" width="40px" /></button>
+          <button><img src="../images/linkedin.svg" width="40px" /></button>
           </div>
-          <div class="location">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12671.607067819505!2d79.85332911024612!3d6.923960700464002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2596aaa8742d9%3A0xced655398fd4d621!2sSLIIT%20Metropolitan%20Campus!5e0!3m2!1sen!2slk!4v1684504938539!5m2!1sen!2slk"
-              width="600"
-              height="390"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
           </div>
-        </div>
       </div>
     </main>
   </body>

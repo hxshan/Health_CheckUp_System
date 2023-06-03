@@ -40,11 +40,11 @@
 <div class="Navibar">
     <div class="naviup">
         <div class="nav-item">
-            <a class="nav-link" href="../pages/UserDashboard.php"><img src="../images/dashboard-64.png" height="45px" width="45px">Dashboard</a>
+            <a class="nav-link" href="../pages/UserDashboard.php"><img src="../images/dashboard.svg" height="45px" width="45px">Dashboard</a>
         </div>
         <div class="nav-item">
            
-            <a class="nav-link" href="#"><img src="../images/appointment-64.png" height="45px" width="45px">Appointments</a>
+            <a class="nav-link" href="#"><img src="../images/calendar.svg" height="45px" width="45px">Appointments</a>
         </div>
         <div class="nav-item">
             <a class="nav-link" href="#"><img src="../images/report-64.png" height="45px" width="45px">Reports</a>
