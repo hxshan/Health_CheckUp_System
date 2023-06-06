@@ -260,7 +260,7 @@ svg{
    position: absolute;
    background-color:rgba(211, 208, 208,50%);
    margin-right: 1rem;
-   transform: translateX(20px);
+   transform: translateX(25px);
 }
 .dropdown-content{
     display: flex;
