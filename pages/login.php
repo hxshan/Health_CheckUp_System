@@ -23,12 +23,15 @@
 
         
         <div class="login-con">
-            <form class="form" action="../includes/login.inc.php" method="post">
-                <img class="form-img" src="../images/form-heart.png">
+            <form class="login-form" action="../includes/login.inc.php" method="post">
+                <!--<img class="form-img" src="../images/form-heart.png">
                 <div class="title">
                     <p class="title-text">Log In</p>
+                </div>-->
+                <div class="login-img">
+                    <img src="../images/login.svg" alt="login image">
                 </div>
-                <p class="message">Step into a world of personalized care.</p>
+                <!--<p class="message">Step into a world of personalized care.</p>-->
                     <input class="log-input" type="email" name="email" placeholder="Email"> 
                     <input class="log-input" type="password" name="password" placeholder="password">
 
