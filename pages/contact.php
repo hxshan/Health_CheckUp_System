@@ -104,7 +104,7 @@
             />
             <h3>Message</h3>
             <textarea id="message" name="message"cols="30" rows="10" placeholder="Type Message"></textarea>
-            <input id="send" type="submit" value="send" />
+            <button id="send" type="submit">Send</button>
           </form>
         </div>
         </div>
