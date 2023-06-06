@@ -3,15 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale= 1.0">
-
         <link rel="stylesheet" href="../styles/signup.css">
-
-        <title>Log-In</title>
-        
+        <title>Log-In</title>     
     </head>
 
     <body>
-        
         <div class="back-btn-div">
             <a href="../index.php"><button class="back-btn" type="button">
                 
@@ -33,11 +29,8 @@
                     <p class="title-text">Log In</p>
                 </div>
                 <p class="message">Step into a world of personalized care.</p>
-
-                <div>
                     <input class="log-input" type="email" name="email" placeholder="Email"> 
                     <input class="log-input" type="password" name="password" placeholder="password">
-                </div>
 
                 <button class="log-submit" type="submit" name="submit">Sign in</button>
 
