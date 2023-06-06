@@ -222,3 +222,26 @@
   .log-input{
     width: 95%;
   }
+  .log-submit{
+    margin: 15px 0;
+    width: 95%;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    font-weight: 600;
+    background-color: royalblue;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #ffffff;
+    transform: .3s ease;
+    box-shadow: 2px 2px 5px #BABECC,
+               -5px -5px 10px #ffffff73; 
+  }
+  .log-submit :focus{
+    background-color: rgb(56, 90, 194);
+    color: #43e3ee;
+    box-shadow: inset 2px 2px 5px #BABECC,
+               inset -5px -5px 10px #ffffff73;
+  }
