@@ -65,7 +65,7 @@
           <img src="images/home-img.svg" width="700px" >
         </div>
         <div class="right">
-        <h1>Feeling busy,get your health checked up right now!!</h1>
+        <h1>Your Health, Our Priority, Embrace Wellness with Confidence!</h1>
         <div class="appointment-btns">
           <?php if(isset($_SESSION["UserId"])){?>
             <a href="pages/checkUpPlans.php">Make Appointment</a>
