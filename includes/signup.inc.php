@@ -6,6 +6,10 @@ if(isset($_POST["submit"])){
    $phone = $_POST["Phone"];
    $password = $_POST["password"];
    $reppassword = $_POST["reppassword"];
+   $address = $_POST["Address"];
+   $DOB = $_POST["DOB"];
+   $Gender = $_POST["Gender"];
+
 
     require_once 'dbh.inc.php';
     require_once 'functions.inc.php';
@@ -39,9 +43,10 @@ if(isset($_POST["submit"])){
         header("location: ../pages/signup.php?error=emailExist");
         exit();
     }
-
-    CreateUser($conn,$firstname,$lastname,$email,$phone,$password);
-
+    $convertedDate=ConvertToDate($DOB);
+    CreateUser($conn,$firstname,$lastname,$email,$phone,$password,1,$address,$convertedDate,$Gender);
+    
+   
 
 }else{
     header("location:../pages/signup.php?error=daas");

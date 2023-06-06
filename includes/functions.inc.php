@@ -11,6 +11,10 @@ function emptyInputSignup($firstname,$lastname,$email,$password,$reppassword){
     }
     return $result;
 }
+function ConvertToDate($date){
+    $condate = date("Y-m-d", strtotime($date));
+    return $condate;
+}
 function emptyInputLogin($email,$pwd){
 
     $result=null;
@@ -83,31 +87,63 @@ function emailExist($conn,$email){
         $result= false;
         return $result;
     }
-    
-    
-    
+}
+function getuserbydetails($conn,$firstname,$lastname,$email){
+    $sql="SELECT * FROM Users WHERE FirstName=? AND LastName=? AND Email=?";
+
+    $stmt=mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($stmt,$sql)){
+
+       
+        exit();
+    }
+    mysqli_stmt_bind_param($stmt,"sss",$firstname,$lastname,$email);
+    mysqli_stmt_execute($stmt);
+
+    $resultdata = mysqli_stmt_get_result($stmt);
+    mysqli_stmt_close($stmt);
+    if($row=mysqli_fetch_assoc($resultdata)){
+        return $row["Id"];
+    }
+
+}
+function AddUserAsPaitent($conn,$firstname,$lastname,$email,$address,$DOB,$Gender){
+
+    $UserId=getuserbydetails($conn,$firstname,$lastname,$email);
+    $sql = "INSERT INTO Patient (UserId,Address, DOB, Gender) VALUES(?,?,?,?);";
+    $stmt=mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($stmt,$sql)){
+        exit();
+    }else{
+        mysqli_stmt_bind_param($stmt,"isss",$UserId,$address,$DOB,$Gender);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
+        header("location: ../pages/login.php?error=none");
+        exit();
+    }
 }
 
-function CreateUser($conn,$firstname,$lastname,$email,$phone,$password){
-    $sql="INSERT INTO Users (FirstName,LastName, Email,PhoneNumber,pwd,RoleId) VALUES (?,?,?,?,?,1);";
+
+function CreateUser($conn,$firstname,$lastname,$email,$phone,$password,$roleId,$address,$convertedDate,$Gender){
+    $sql="INSERT INTO Users (FirstName,LastName, Email,PhoneNumber,pwd,RoleId) VALUES (?,?,?,?,?,?)";
+
 
     $stmt=mysqli_stmt_init($conn);
 
     if(!mysqli_stmt_prepare($stmt,$sql)){
 
         header("location ../pages/signup.php?error=stmtfailed");
-        exit();
+        return false;
     }
     $hashpwd=password_hash($password,PASSWORD_DEFAULT);
     
-    mysqli_stmt_bind_param($stmt,"sssss",$firstname,$lastname,$email,$phone,$hashpwd);
+    mysqli_stmt_bind_param($stmt,"sssssi",$firstname,$lastname,$email,$phone,$hashpwd,$roleId);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../pages/login.php?error=none");
-    exit();
 
-    
+    AddUserAsPaitent($conn,$firstname,$lastname,$email,$address,$convertedDate,$Gender);
 }
+
 function getUserInfo($conn,$id){
     $sql="SELECT * FROM Users WHERE id=?;";
 
@@ -169,7 +205,17 @@ function getCheckUpPlansbyId($conn,$id){
         return $result;
     }   
     
-} 
+}
+
+/*function makeCheckupAppointment($conn,$id){
+    $sql="INSERT INTO ";
+    $stmt=mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($stmt,$sql)){
+        exit();
+    }else{
+        mysqli_stmt_bind_param();
+    }
+}*/
 function getTestbyId($conn,$id){
     $sql="SELECT * FROM test WHERE Id = ?;";
     $stmt=mysqli_stmt_init($conn);
@@ -196,5 +242,5 @@ function getCheckUpDetails($conn,$id){
     }
 
    
-}
 
+}
