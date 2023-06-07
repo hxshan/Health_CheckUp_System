@@ -1,5 +1,6 @@
-.content-container{
-margin-left: 210px;
+.dashboard-container{
+margin-left: 230px;
+margin-right: 30px;
 }
 .closed{
     display: none;
@@ -31,4 +32,62 @@ margin-left: 210px;
 .dropdown-content a:hover{
     background-color: #7FD858;
     color: black;
+}
+
+/*-------------------------------------------------------Dashbord-------------------------------------------------------------*/
+.upcoming-div {
+    background-color: rgb(107, 140, 239);
+  /*  background: linear-gradient(royalblue, #92f468);*/
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    border: 2px solid #49e208;
+    border-radius: 5px;
+    padding: 30px 40px;
+    min-height: 300px;
+}
+
+.dashboard-container h1{
+    margin-top: 10px;
+}
+
+.event-con {
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #49e208;
+    border-radius: 5px;
+    padding: 10px 20px;
+    height: 280px;
+    width: 200px;
+}
+
+.dash-view-btn {
+    width: 45%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 2px solid #49e208;
+    border-radius: 30px;
+    transition: 0.2s;
+}
+
+.dash-view-btn:hover {
+    background-color: #87fc54;
+    color: rgb(24, 36, 197);
+    border: 2px solid rgb(79, 90, 243);
+    cursor: pointer;
+}
+
+.event-con h2 {
+    margin-top: 20px;
+}
+
+.services-container {
+    margin-top: 30px;
+}
+
+.service-div {
+    margin-top: 20px;
 }

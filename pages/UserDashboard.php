@@ -18,10 +18,34 @@ session_start();
     <?php
         include_once "../includes/Head-sidebar.inc.php";
     ?>
-    <div class="content-container">
-        <h1>Upcoming</h1>   
-        <a href="../includes/logout.inc.php">Logout</a>
+    <div class="dashboard-content">
+        <div class="dashboard-container">
+            <h1>Upcoming Event</h1>
+            <div class="upcoming-div">
+                <div class="event-con">
+                    <h2>Title</h2>
+                    <p>Somthing</p>
+                    <button class="dash-view-btn" type="button">view</button>
+                </div>
+        </div>
 
+        <div class="services-container">
+            <h1>Services</h1>
+            <div class="service-div">
+                <div class="event-con">
+                    <img src="">
+                    <h2>Title</h2>
+                    <p>Somthing</p>
+                <!--<button class="dash-view-btn" type="button">view</button>-->
+                </div>
+        </div>
+    </div>
+
+    <div class="appoinment-content">
+        
+    </div>
+          
+        <a href="../includes/logout.inc.php">Logout</a>
     </div>
     </main>
     
