@@ -37,30 +37,37 @@
     </div>
     <div class="Navibar">
         <div class="naviup">
-            <div class="nav-item">
+            <div class="nav-item" onclick="showPage('page1');">
                 <a class="nav-link" href="../pages/UserDashboard.php"><img src="../images/dashboard.svg" height="40px" width="40px">Dashboard</a>
             </div>
-            <div class="nav-item">
 
+            <div class="nav-item" onclick="showPage('page2');">
                 <a class="nav-link" href="#"><img src="../images/calendar.svg" height="40px" width="40px">Appointments</a>
             </div>
+
             <div class="nav-item">
                 <a class="nav-link" href="#"><img src="../images/report-64.png" height="40px" width="40px">Reports</a>
             </div>
+
             <?php if($role==1 || $role==2){?>
             <div class="nav-item">
                 <a class="nav-link" href="#"> <img src="../images/diet-64.png" height="40px" width="40px">Diet Plans</a>
             </div>
+
             <?php }?>
             <?php if($role==3){?>
+
             <div class="nav-item">
                 <a class="nav-link" href="#"><img src="../images/patients-64.png" height="40px" width="40px">Patients</a>
             </div>
+
             <?php }?>
             <?php if($role==4){?>
+                
             <div class="nav-item">
                 <a class="nav-link" href="#"><img src="../images/staff-64.png" height="40px" width="40px">Staff</a>
             </div>
+
         </div>
         <?php }?>
 

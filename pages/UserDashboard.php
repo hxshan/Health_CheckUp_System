@@ -18,7 +18,8 @@ session_start();
     <?php
         include_once "../includes/Head-sidebar.inc.php";
     ?>
-    <div class="dashboard-content">
+
+    <div id="page1" class="dashboard-content">
         <div class="dashboard-container">
             <h1>Upcoming Event</h1>
             <div class="upcoming-div">
@@ -40,12 +41,12 @@ session_start();
                 <!--<button class="dash-view-btn" type="button">view</button>-->
                 </div>
         </div>
-    </div>
-    
+
         <a href="../includes/logout.inc.php">Logout</a>
     </div>
-
-    <div class="appoinment-content">
+    
+        
+    <div id="page2" class="hidden" class="appoinment-content">
         <div>
             <table>
                 <thead>
@@ -332,6 +333,6 @@ session_start();
     </div>
       
     </main>
-    
+    <script src="../scripts/dashboard.js"></script>
 </body>
 </html>

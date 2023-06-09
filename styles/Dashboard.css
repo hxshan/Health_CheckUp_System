@@ -96,7 +96,6 @@ margin-right: 30px;
 .appoinment-content{
     margin-left: 230px;
     margin-right: 30px;
-    display: none;
 }
 
 table {
@@ -127,4 +126,8 @@ tr:nth-child(even) {
 
 tr:hover {
   background-color: #eaeaea;
+}
+
+.hidden{
+    display: none;
 }
