@@ -40,7 +40,7 @@ $data=getCheckUpDetails($conn,$id);
                              $testData=getTestbyId($conn,$row["TestId"]);
                             while($test=mysqli_fetch_assoc($testData)){?>
                                <div class="test">
-                                    <img src="../images/ -down-48.png">
+                                    <img src="../images/sort-down-48.png">
                                     <?php echo "<p>".$test["Test"]."</p>";?>
                                 </div>
                         <?php }
@@ -50,18 +50,19 @@ $data=getCheckUpDetails($conn,$id);
             </div>
             <div class="appointment-con">
                 <h2>Make an Appointment</h2>
-                <form>
+                <form action="../includes/checkupApp.inc.php" method="post">
                     <div class="input-con">
                         <label for="date">Date:</label>
-                        <input type="date" id="date" name="date" required>
+                        <input type="date" id="date" name="date">
                     </div>
                     <div class="input-con">
                         <label for="time">Time:</label>
-                        <input type="time" id="time" name="time" required>
+                        <input type="time" id="time" name="time">
                     </div>
-                    <input id="submit-btn" name="submit" type="submit" value="Submit Appointment">
+                    <input type="hidden" name="chkId" value="<?php echo $id; ?>">
+                    <input id="submit-btn" name="make-App" type="submit" value="Submit Appointment">
                 </form>
-        </div>
+            </div>
             
         </main>
         
