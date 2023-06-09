@@ -134,3 +134,75 @@ tr:hover {
 .hidden{
     display: none;
 }
+
+/*------------------------------------Diet plan ---------------------------------------------------------------------------------*/
+.diet-plan-content {
+    margin-left: 200px;
+    margin-right: 50px;
+}
+.welcome {
+    width: 250px;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    padding: 10px ;
+    margin-bottom: 25px;
+}
+
+.diet-info {
+    border: 2px solid black;
+    min-height: 500px;
+    width: 400px;
+}
+
+.diet-info h2,h3 {
+    text-align: center;
+}
+
+.diet-plan-div {
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 250px;
+    min-height: 350px;
+    margin: auto;
+    padding: 10px 20px;
+}
+
+.info {
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 350px;
+    max-height: 200px;
+    text-align: center;
+    padding: 15px;
+}
+
+.new-diet-plan {
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 10px;
+    min-height: 100px;
+}
+
+.diet-plan-options {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+}
+
+.diet-plan-options a {
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.diet-page-div {
+    display: flex;
+    justify-content: space-between;
+}

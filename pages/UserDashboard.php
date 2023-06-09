@@ -331,8 +331,52 @@ session_start();
             
         </div>   
     </div>
-      
-    </main>
+   
+    <div  class="diet-plan-content" class="hidden">
+            <div class="welcome" >
+                <h1>Welcome to Diet Plan</h1>
+            </div>
+
+            <div class="diet-page-div">
+                <div class="diet-info">
+                    <h2>Started Plans</h2>
+                    <div class="diet-plan-div">
+                        <h3>Diet plan name</h3>
+                        <p>Started date : </p>
+                        <p>Status : </p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="info">
+                            <h2>Contact Dietitian</h2>
+                            <p>Email :dietitien.checkupz@gmail.com</p>
+                            <div class="icons">
+                        <button><img src="../images/instagram.svg" width="40px" /></button>
+                        <button><img src="../images/facebook.svg" width="40px" /></button>
+                        <button><img src="../images/twitter.svg" width="40px" /></button>
+                        <button><img src="../images/linkedin.svg" width="40px" /></button>
+                        </div>
+                    </div>
+
+                    <div class="new-diet-plan">
+                        <h1>Diet Plans</h1>
+                        <div class="diet-plan-options">
+                            <div>
+                                <a href="#">Pre-made diet plan</a>
+                            </div>
+
+                            <div>
+                                <a href="#">Pre-made diet plan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
     <script src="../scripts/dashboard.js"></script>
 </body>
 </html>
