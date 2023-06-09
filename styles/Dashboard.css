@@ -36,12 +36,11 @@ margin-right: 30px;
 
 /*-------------------------------------------------------Dashbord-------------------------------------------------------------*/
 .upcoming-div {
-    background-color: rgb(107, 140, 239);
   /*  background: linear-gradient(royalblue, #92f468);*/
     display: flex;
     align-items: center;
     margin-top: 15px;
-    border: 2px solid #49e208;
+    border: 2px solid black;
     border-radius: 5px;
     padding: 30px 40px;
     min-height: 300px;
@@ -57,7 +56,7 @@ margin-right: 30px;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid #49e208;
+    border: 1px solid black;
     border-radius: 5px;
     padding: 10px 20px;
     height: 280px;
@@ -68,13 +67,13 @@ margin-right: 30px;
     width: 45%;
     padding: 5px;
     margin-bottom: 10px;
-    border: 2px solid #49e208;
+    border: 2px solid black;
     border-radius: 30px;
     transition: 0.2s;
 }
 
 .dash-view-btn:hover {
-    background-color: #87fc54;
+    background-color: black;
     color: rgb(24, 36, 197);
     border: 2px solid rgb(79, 90, 243);
     cursor: pointer;
