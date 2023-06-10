@@ -150,12 +150,18 @@ tr:hover {
     font-size: 0.8rem;
     padding: 10px ;
     margin-bottom: 25px;
+    background-color: rgba(238, 220, 165, 0.938);
+    box-shadow: 1px 0px 5px;
 }
 
 .diet-info {
+    background: linear-gradient(#3C84AB,#85CDFD);
     border: 2px solid black;
     min-height: 450px;
-    width: 380px;
+    min-width: 380px;
+    box-shadow: 1px 0px 5px;
+    
+    
 }
 
 .diet-info h2,h3 {
@@ -174,6 +180,10 @@ tr:hover {
     min-height: 350px;
     margin: auto;
     padding: 10px 20px;
+    background-color: azure;
+   
+    
+    
 }
 
 .info {
@@ -183,6 +193,8 @@ tr:hover {
     max-height: 200px;
     text-align: center;
     padding: 15px;
+    background: linear-gradient(#3C84AB,#85CDFD);
+    
 }
 
 .info h2,.info p, .icons {
@@ -218,12 +230,14 @@ tr:hover {
     text-align: center;
     padding: 10px;
     min-height: 100px;
+    background: linear-gradient(#3C84AB,#85CDFD);
 }
 
 .diet-plan-options {
     display: flex;
     justify-content: space-around;
     margin: 30px 0;
+    
 }
 
 .diet-plan-options a {
@@ -232,6 +246,7 @@ tr:hover {
     border: 2px solid black;
     border-radius: 5px;
     padding: 10px;
+    background-color: azure;
 }
 
 .diet-plan-options a:hover{
@@ -247,3 +262,4 @@ tr:hover {
     display: flex;
     justify-content: space-between;
 }
+
