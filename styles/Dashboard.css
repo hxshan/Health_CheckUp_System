@@ -263,3 +263,125 @@ tr:hover {
     justify-content: space-between;
 }
 
+
+/*----------------------------------Doctor----------------------------------------------------------------------------------------
+-----------------------------------------Patient List---------------------------------------------------------------------------*/
+
+.patient-content {
+    margin-left: 230px;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+
+.patient-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.patient-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 350px;
+    height: 400px;
+    padding: 20px 25px;
+}
+
+.patient-list-info {    
+        width: 300px;
+        border: 1px solid black;
+        border-radius: 5px;
+        float: left;
+        padding: 10px 25px;
+        margin-bottom: 20px;
+}
+
+.patient-list-info p {
+    display: inline-block;
+    vertical-align: 12px;
+    margin-left: 30px;
+}
+
+.Patient-profile {
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    min-height: 400px;
+    padding: 20px 45px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 15px;
+
+    text-align: start;
+    margin-left: 50px;
+    margin-top: 20px;
+    }
+
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 1 / 2 / 2 / 3; }
+    .div3 { grid-area: 2 / 1 / 3 / 2; }
+    .div4 { grid-area: 2 / 2 / 3 / 3; }
+    .div5 { grid-area: 3 / 1 / 4 / 2; }
+    .div6 { grid-area: 3 / 2 / 4 / 3; }
+    .div7 { grid-area: 4 / 1 / 5 / 2; }
+    .div8 { grid-area: 4 / 2 / 5 / 3; }
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.options a {
+    padding:5px 25px;
+    border: 2px solid black;
+    border-radius: 30px;
+    transition: 0.2s;
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.6rem;
+}
+
+.options a:hover {
+    background-color: #87fc54;
+    color: rgb(24, 36, 197);
+    border: 2px solid rgb(79, 90, 243);
+    cursor: pointer;
+    box-shadow: 0px 0px 15px rgb(64, 75, 219);
+}
+
+.contact-patient {
+    margin-top: 55px;
+    margin-bottom: 20px;
+}
+
+.contact-patient a{
+    padding:10px 50px;
+    border: 2px solid black;
+    border-radius: 30px;
+    transition: 0.2s;
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;                
+    
+}
+
+.contact-patient a:hover {
+    background-color: #87fc54;
+    color: rgb(24, 36, 197);
+    border: 2px solid rgb(79, 90, 243);
+    cursor: pointer;
+    box-shadow: 0px 0px 15px rgb(64, 75, 219);
+}
