@@ -197,6 +197,7 @@ tr:hover {
     text-align: center;
     padding: 15px;
     background: linear-gradient(#3C84AB,#85CDFD);
+    box-shadow: 1px 0px 5px;
     
 }
 
@@ -234,12 +235,14 @@ tr:hover {
     padding: 10px;
     min-height: 100px;
     background: linear-gradient(#3C84AB,#85CDFD);
+    box-shadow: 1px 0px 5px;
 }
 
 .diet-plan-options {
     display: flex;
     justify-content: space-around;
     margin: 30px 0;
+    font-weight: bold;
     
 }
 
