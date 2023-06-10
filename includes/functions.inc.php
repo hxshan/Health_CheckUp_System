@@ -1,5 +1,6 @@
 <?php
 
+//youtube tutorial by Dani Krossing 
 function emptyInputSignup($firstname,$lastname,$email,$password,$reppassword){
 
     $result=null;
@@ -12,9 +13,10 @@ function emptyInputSignup($firstname,$lastname,$email,$password,$reppassword){
     return $result;
 }
 function ConvertToDate($date){
-    $condate = date("Y-m-d", strtotime($date));
+    $condate = date("Y-m-d", strtotime($date));//line taken from stack overflow
     return $condate;
 }
+//youtube tutorial by Dani Krossing 
 function emptyInputLogin($email,$pwd){
 
     $result=null;
@@ -26,7 +28,7 @@ function emptyInputLogin($email,$pwd){
     }
     return $result;
 }
-
+//youtube tutorial by Dani Krossing 
 function invalidNameSignup($firstname,$lastname){
 
     $result=null;
@@ -43,6 +45,7 @@ function invalidNameSignup($firstname,$lastname){
     }
     return $result;
 }
+//youtube tutorial by Dani Krossing 
 function invalidEmailSignup($email){
 
     $result=null;
@@ -54,6 +57,7 @@ function invalidEmailSignup($email){
     }
     return $result;
 }
+//youtube tutorial by Dani Krossing 
 function pwdMatchInvalid($password,$reppassword){
 
     $result=null;
@@ -65,7 +69,7 @@ function pwdMatchInvalid($password,$reppassword){
     }
     return $result;
 }
-
+//youtube tutorial by Dani Krossing 
 function emailExist($conn,$email){
     $sql="SELECT * FROM Users WHERE Email=?;";
 
@@ -88,6 +92,7 @@ function emailExist($conn,$email){
         return $result;
     }
 }
+//own Code
 function getuserbydetails($conn,$firstname,$lastname,$email){
     $sql="SELECT * FROM Users WHERE FirstName=? AND LastName=? AND Email=?";
 
@@ -108,6 +113,8 @@ function getuserbydetails($conn,$firstname,$lastname,$email){
 
 }
 
+//my Own
+
 function getPatientbyUserId($conn,$id){
     $sql="SELECT * FROM patient WHERE UserId = ?;";
     $stmt=mysqli_stmt_init($conn);
@@ -124,8 +131,6 @@ function getPatientbyUserId($conn,$id){
         
     }   
 }
-
-
 function AddUserAsPaitent($conn,$firstname,$lastname,$email,$address,$DOB,$Gender){
 
     $UserId=getuserbydetails($conn,$firstname,$lastname,$email);
@@ -141,8 +146,23 @@ function AddUserAsPaitent($conn,$firstname,$lastname,$email,$address,$DOB,$Gende
         exit();
     }
 }
+function AddUserAsAdmin($conn,$firstname,$lastname,$email){
 
+    $UserId=getuserbydetails($conn,$firstname,$lastname,$email);
+    $sql = "INSERT INTO Admin (UserId) VALUES(?);";
+    $stmt=mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($stmt,$sql)){
+        exit();
+    }else{
+        mysqli_stmt_bind_param($stmt,"i",$UserId);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
+        header("location: ../pages/login.php?error=none");
+        exit();
+    }
+}
 
+//youtube tutorial by Dani Krossing modified further to fit the system
 function CreateUser($conn,$firstname,$lastname,$email,$phone,$password,$roleId,$address,$convertedDate,$Gender){
     $sql="INSERT INTO Users (FirstName,LastName, Email,PhoneNumber,pwd,RoleId) VALUES (?,?,?,?,?,?)";
 
@@ -159,10 +179,15 @@ function CreateUser($conn,$firstname,$lastname,$email,$phone,$password,$roleId,$
     mysqli_stmt_bind_param($stmt,"sssssi",$firstname,$lastname,$email,$phone,$hashpwd,$roleId);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-
-    AddUserAsPaitent($conn,$firstname,$lastname,$email,$address,$convertedDate,$Gender);
+    if($roleId==1){
+        AddUserAsPaitent($conn,$firstname,$lastname,$email,$address,$convertedDate,$Gender);
+    }
+    elseif ($roleId==4){
+        AddUserAsAdmin($conn,$firstname,$lastname,$email);
+    }
+    
 }
-
+//my own
 function getUserInfo($conn,$id){
     $sql="SELECT * FROM Users WHERE id=?;";
     $stmt=mysqli_stmt_init($conn);
@@ -178,6 +203,7 @@ function getUserInfo($conn,$id){
     }
 
 }
+//youtube tutorial by Dani Krossing 
 function LoginUser($conn,$email,$password){
     $users=emailExist($conn,$email);
     if($users===false){
@@ -198,7 +224,7 @@ function LoginUser($conn,$email,$password){
     }
 } 
 
-
+//My own code Lies below
 function getCheckUpPlans($conn){
     $sql="SELECT * FROM checkupplan"; 
     $result= mysqli_query($conn,$sql);
@@ -245,6 +271,24 @@ function getCheckUpDetails($conn,$id){
     }
 
 }
+function getPatientbyUserId($conn,$id){
+    $sql="SELECT * FROM patient WHERE UserId=?;";
+    $stmt=mysqli_stmt_init($conn);
+
+    if(!mysqli_stmt_prepare($stmt,$sql)){
+        exit();
+    }
+    else{
+        mysqli_stmt_bind_param($stmt,"i",$id);
+        mysqli_stmt_execute($stmt);
+
+        $resultdata = mysqli_stmt_get_result($stmt);
+        mysqli_stmt_close($stmt);
+        if($row=mysqli_fetch_assoc($resultdata)){
+            return $row;
+        }
+    }
+}
 function makeCheckUpApp($conn,$Id,$planId){
     $sql="INSERT INTO checkupappointment (PatientAppointmentId,CheckupPlanId) VALUES (?,?);";
 
@@ -276,4 +320,18 @@ function makePatientApp($conn,$patientId,$CreatedDate,$scheduledDate,$status,$Ty
         makeCheckUpApp($conn,$PAId,$planId);
     }   
 
+}
+function getPatientAppbyId($conn,$PId){
+    $sql="SELECT * FROM patientappointment WHERE PatientId=?;";
+    $stmt=mysqli_stmt_init($conn);
+
+    if(!mysqli_stmt_prepare($stmt,$sql)){
+        exit();
+    }
+    else{
+        mysqli_stmt_bind_param($stmt,"i",$PId);
+        mysqli_stmt_execute($stmt);
+        $result= mysqli_stmt_get_result($stmt);
+        return $result;
+    }
 }

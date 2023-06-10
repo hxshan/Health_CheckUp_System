@@ -12,6 +12,9 @@
     max-width: 100vh;
     max-height: 100vh;
 }   
+.container{
+    position: sticky;
+}
 
 .header
 {
@@ -32,8 +35,6 @@
     display: flex;
     margin-right: 10px;
     align-items: center;
-    
-    
 }
 
 .fulln
@@ -64,33 +65,40 @@ margin-left: 10px;
   height: 100%; 
   width: 200px; 
   float: left;
-  background-color: #111; 
   overflow-x: hidden; 
   position: fixed;
-  
+  background-color: royalblue;
 }
 
 .nav-item{
     display: flex;
     flex-direction:row;
     align-items: center;
-    background-color: royalblue;
-    border-bottom: 2px solid;
+    justify-content: center;
+    border-bottom: 1px solid;
+    height: 65px;
+
 }
 .nav-item img{
     margin:0 15px 0 10px;
 }
-.nav-item a{
+.nav-link{
     display: flex;
     flex-direction: row;
     align-items: center;
     text-decoration: none;
-    color: black;
+    color: rgb(242, 242, 242);
+    font-weight: bold;
     width: 200px;
+    cursor: pointer;
+    margin: 10px 0;
 }
-.nav-item a:hover{
+.nav-item:hover{
     background-color: #7FD858;
     color: white;
+    font-size: 1.2rem;
+    transition: 0.2s;
+    box-shadow: -1px 0px 10px black;
 }
 
 .navidown{
@@ -99,3 +107,6 @@ margin-left: 10px;
    width: 200px;
 }
 
+.nav-item#back-to-home {
+    border-top: 1px solid black;
+}

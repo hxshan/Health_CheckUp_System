@@ -1,4 +1,7 @@
-.dashboard-container{
+body{
+    background: linear-gradient(#F8F6F4,#ffffff);
+}
+.dashboard-content{
 margin-left: 230px;
 margin-right: 30px;
 }
@@ -36,12 +39,13 @@ margin-right: 30px;
 
 /*-------------------------------------------------------Dashbord-------------------------------------------------------------*/
 .upcoming-div {
-    background-color: rgb(107, 140, 239);
   /*  background: linear-gradient(royalblue, #92f468);*/
+  background:linear-gradient(#3C84AB,#85CDFD) ;
     display: flex;
     align-items: center;
     margin-top: 15px;
-    border: 2px solid #49e208;
+    border: 2px solid black;
+    box-shadow: 1px 0px 5px;
     border-radius: 5px;
     padding: 30px 40px;
     min-height: 300px;
@@ -50,39 +54,63 @@ margin-right: 30px;
 .dashboard-container h1{
     margin-top: 10px;
 }
-
 .event-con {
     background-color: azure;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid #49e208;
+    border: 1px solid black;
     border-radius: 5px;
+    box-shadow: 0px 0px 5px;
     padding: 10px 20px;
     height: 280px;
     width: 200px;
+}
+.service-div .card{
+    list-style: none;
+    background-color: #7FD858;
+    height: 300px;
+    width: 250px;
+    
+    border: 2px solid white;
+}
+.wrapper{
+    max-width:1090px;
+    width: 100%;
+}
+.whole{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 35px;
+}
+
+.wrapper .service-div{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100/3)-12px);
+    gap: 20px;
+    overflow: hidden;
+    scroll-behavior:smooth ;
 }
 
 .dash-view-btn {
     width: 45%;
     padding: 5px;
     margin-bottom: 10px;
-    border: 2px solid #49e208;
+    border: 2px solid black;
     border-radius: 30px;
     transition: 0.2s;
 }
 
 .dash-view-btn:hover {
-    background-color: #87fc54;
+    background-color: rgb(102, 231, 9);
     color: rgb(24, 36, 197);
     border: 2px solid rgb(79, 90, 243);
     cursor: pointer;
 }
 
-.event-con h2 {
-    margin-top: 20px;
-}
 
 .services-container {
     margin-top: 30px;
@@ -90,4 +118,484 @@ margin-right: 30px;
 
 .service-div {
     margin-top: 20px;
+}
+.wrapper img{
+    background-color: #49e208;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+}
+.wrapper img:first-child{
+    left:400px;
+}
+.wrapper img:last-child{
+    right:200px;
+}
+
+.service-div .dragging {
+    cursor:grab;
+    user-select: none;
+
+
+}
+/*------------------------------------Appointment ---------------------------------------------------------------------------------*/
+.appoinment-content{
+    margin-left: 230px;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+th:first-child,
+td:first-child {
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #eaeaea;
+}
+
+.hidden{
+    display: none;
+}
+
+/*------------------------------------Diet plan ---------------------------------------------------------------------------------*/
+.diet-plan-content {
+    margin-left: 230px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+.welcome {
+    width: 250px;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    padding: 10px ;
+    margin-bottom: 25px;
+}
+
+.diet-info {
+    border: 2px solid black;
+    min-height: 450px;
+    width: 380px;
+}
+
+.diet-info h2,h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.diet-info h2 {
+    margin-top: 10px;
+}
+
+.diet-plan-div {
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 250px;
+    min-height: 350px;
+    margin: auto;
+    padding: 10px 20px;
+}
+
+.info {
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 350px;
+    max-height: 200px;
+    text-align: center;
+    padding: 15px;
+}
+
+.info h2,.info p, .icons {
+    margin-bottom: 20px;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons button{
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    transition: 0.5s;
+}
+
+.icons button:hover{
+    background-color: #63fa22;
+    box-shadow: 2px 2px 15px #63fa22;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.new-diet-plan {
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 10px;
+    min-height: 100px;
+}
+
+.diet-plan-options {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+}
+
+.diet-plan-options a {
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.diet-plan-options a:hover{
+    background-color: rgb(102, 231, 9);
+    color: rgb(24, 36, 197);
+    box-shadow: 2px 2px 15px #63fa22;
+    transition: 0.5s;
+    border: 2px solid rgb(79, 90, 243);
+    cursor: pointer;
+}
+
+.diet-page-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*------------------------------------Appointment ---------------------------------------------------------------------------------*/
+.appoinment-content{
+    margin-left: 230px;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+th:first-child,
+td:first-child {
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #eaeaea;
+}
+
+.hidden{
+    display: none;
+}
+
+/*------------------------------------Diet plan ---------------------------------------------------------------------------------*/
+.diet-plan-content {
+    margin-left: 230px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+.welcome {
+    width: 250px;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    padding: 10px ;
+    margin-bottom: 25px;
+    background-color: rgba(238, 220, 165, 0.938);
+    box-shadow: 1px 0px 5px;
+}
+
+.diet-info {
+    background: linear-gradient(#3C84AB,#85CDFD);
+    border: 2px solid black;
+    min-height: 450px;
+    min-width: 380px;
+    box-shadow: 1px 0px 5px;
+    
+    
+}
+
+.diet-info h2,h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.diet-info h2 {
+    margin-top: 10px;
+}
+
+.diet-plan-div {
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 250px;
+    min-height: 350px;
+    margin: auto;
+    padding: 10px 20px;
+    background-color: azure;
+    box-shadow: 0px 0px 2px;
+   
+    
+    
+}
+
+.info {
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 350px;
+    max-height: 200px;
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(#3C84AB,#85CDFD);
+    box-shadow: 1px 0px 5px;
+    
+}
+
+.info h2,.info p, .icons {
+    margin-bottom: 20px;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons button{
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    transition: 0.5s;
+}
+
+.icons button:hover{
+    background-color: #63fa22;
+    box-shadow: 2px 2px 15px #63fa22;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.new-diet-plan {
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 10px;
+    min-height: 100px;
+    background: linear-gradient(#3C84AB,#85CDFD);
+    box-shadow: 1px 0px 5px;
+}
+
+.diet-plan-options {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+    font-weight: bold;
+    
+}
+
+.diet-plan-options a {
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: azure;
+}
+
+.diet-plan-options a:hover{
+    background-color: rgb(102, 231, 9);
+    color: rgb(24, 36, 197);
+    box-shadow: 2px 2px 15px #63fa22;
+    transition: 0.5s;
+    border: 2px solid rgb(79, 90, 243);
+    cursor: pointer;
+}
+
+.diet-page-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*----------------------------------Doctor----------------------------------------------------------------------------------------
+-----------------------------------------Patient List---------------------------------------------------------------------------*/
+
+.patient-content {
+    margin-left: 230px;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+
+.patient-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.patient-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 350px;
+    height: 400px;
+    padding: 20px 25px;
+    background: linear-gradient(#3C84AB,#85CDFD);
+    box-shadow: 1px 0px 5px;
+}
+
+.patient-list-info {    
+        width: 300px;
+        border: 1px solid black;
+        border-radius: 5px;
+        float: left;
+        padding: 10px 25px;
+        margin-bottom: 20px;
+        background-color: azure;
+        box-shadow: 0px 0px 5px;
+}
+
+.patient-list-info p {
+    display: inline-block;
+    vertical-align: 12px;
+    margin-left: 30px;
+}
+
+.Patient-profile {
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    min-height: 400px;
+    padding: 20px 45px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    background: azure;
+    box-shadow: 1px 0px 5px;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 15px;
+
+    text-align: start;
+    margin-left: 50px;
+    margin-top: 20px;
+    }
+
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 1 / 2 / 2 / 3; }
+    .div3 { grid-area: 2 / 1 / 3 / 2; }
+    .div4 { grid-area: 2 / 2 / 3 / 3; }
+    .div5 { grid-area: 3 / 1 / 4 / 2; }
+    .div6 { grid-area: 3 / 2 / 4 / 3; }
+    .div7 { grid-area: 4 / 1 / 5 / 2; }
+    .div8 { grid-area: 4 / 2 / 5 / 3; }
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    
+}
+
+.options a {
+    padding:5px 25px;
+    border: 2px solid black;
+    border-radius: 30px;
+    transition: 0.2s;
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.65rem;
+    
+}
+
+.options a:hover {
+    background-color: #87fc54;
+    color: rgb(24, 36, 197);
+    border: 2px solid rgb(79, 90, 243);
+    cursor: pointer;
+    box-shadow: 0px 0px 15px rgb(64, 75, 219);
+}
+
+.contact-patient {
+    margin-top: 55px;
+    margin-bottom: 20px;
+    
+}
+
+.contact-patient a{
+    padding:10px 50px;
+    border: 2px solid black;
+    border-radius: 30px;
+    transition: 0.2s;
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;   
+    box-shadow: 0px 0px 2px;             
+    
+}
+
+.contact-patient a:hover {
+    background-color: #87fc54;
+    color: rgb(24, 36, 197);
+    border: 2px solid rgb(79, 90, 243);
+    cursor: pointer;
+    box-shadow: 0px 0px 15px rgb(64, 75, 219);
 }
