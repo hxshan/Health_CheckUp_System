@@ -67,9 +67,9 @@
             <div class="nav-item" id="staff-btn">
                 <p class="nav-link"><img src="../images/staff-64.png" height="40px" width="40px">Staff</p>
             </div>
-
+            <?php }?>
         </div>
-        <?php }?>
+        
 
         <div class="navidown">
         <div class="nav-item" id="back-to-home" >
@@ -85,4 +85,4 @@
         </div>
     </div>
 
-<script src="../scripts/header.js"></script>
+<script src="../scripts/header.js"></script>    
