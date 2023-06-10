@@ -7,6 +7,8 @@ $role=$userInfo["RoleId"];
 if($role==1){
     $PatientInfo=getPatientbyUserId($conn,$_SESSION["UserId"]);
     $patientId=$PatientInfo["Id"];
+    $patientapp=getPatientAppbyId($conn,$patientId);
+    $checkUpInfo=getCheckUpPlans($conn);
 }
 
 ?>
@@ -31,13 +33,19 @@ if($role==1){
             <div id="page1" class="dashboard-content" >
                 <div class="dashboard-container">
                     <h1>Upcoming Event</h1>
+                    
                     <div class="upcoming-div">
+                    <?php while($row=mysqli_fetch_assoc($patientapp) ) {?>
                         <div class="event-con">
-                            <h2>Title</h2>
-                            <p>Somthing</p>
+                            <?php if($row["TypeId"]==1){
+                                echo "<h2>CheckUp Appointment</h2>";
+                             }?>
+                            <p>Upcoming Appointment</p>
                             <button class="dash-view-btn" type="button">view</button>
                         </div>
+                        <?php } ?>
                     </div>
+                    
                 </div>
                     <div class="services-container">
                         <h1>Services</h1>
@@ -45,30 +53,13 @@ if($role==1){
                             <div class="wrapper">
                                 <img id="left" src="../images/angle-left-solid.svg">
                                 <ul class="service-div">
+                               <?php while($chkrow=mysqli_fetch_assoc($checkUpInfo) ) {?>
                                         <li class="card">
-                                            <h2>Title</h2>
-                                            <p>Somthing</p>
-                                    </li>
-                                    <li class="card">
-                                            <h2>Title</h2>
-                                            <p>Somthing</p>
-                                    </li>
-                                    <li class="card">
-                                            <h2>Title</h2>
-                                            <p>Somthing</p>
-                                    </li>
-                                    <li class="card">
-                                            <h2>Title</h2>
-                                            <p>Somthing</p>
-                                    </li>
-                                    <li class="card">
-                                            <h2>Title</h2>
-                                            <p>Somthing</p>
-                                    </li>
-                                    <li class="card">
-                                            <h2>Title</h2>
-                                            <p>Somthing</p>
-                                    </li>
+                                            <?php echo "<h2>".$chkrow["Name"]."</h2>" ?>
+                                            <?php echo "<p>".$chkrow["Description"]."</p>";?>
+                                            <?php echo "<a href=\"CheckUpDetail.php?chkId=".$chkrow["Id"]."\""."> View More </a>"?>
+                                        </li>
+                                <?php } ?>  
                                 </ul>
                             <img id="right" src="../images/angle-right-solid.svg">
                         </div>
