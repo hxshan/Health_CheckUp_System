@@ -28,29 +28,52 @@ if($role==1){
                 include_once "../includes/Head-sidebar.inc.php";
             ?>  
 
-            <div id="page1" class="dashboard-content" >
-                <div class="dashboard-container">
-                    <h1>Upcoming Event</h1>
-                    <div class="upcoming-div">
-                        <div class="event-con">
-                            <h2>Title</h2>
-                            <p>Somthing</p>
-                            <button class="dash-view-btn" type="button">view</button>
-                        </div>
-                    </div>
+    <div id="page1" class="dashboard-content" >
+        <div class="dashboard-container">
+            <h1>Upcoming Event</h1>
+            <div class="upcoming-div">
+                <div class="event-con">
+                    <h2>Title</h2>
+                    <p>Somthing</p>
+                    <button class="dash-view-btn" type="button">view</button>
                 </div>
-
-                <div class="services-container">
-                    <h1>Services</h1>
-                    <div class="service-div">
-                        <div class="event-con">
-                            <img src="">
-                            <h2>Title</h2>
-                            <p>Somthing</p>
-                        <!--<button class="dash-view-btn" type="button">view</button>-->
-                        </div>
-                    </div>
-                </div>
+            </div>
+        </div>
+        <div class="services-container">
+        <h1>Services</h1>
+        <div class="whole">
+        <div class="wrapper">
+            <img id="left" src="../images/angle-left-solid.svg">
+            <ul class="service-div">
+                <li class="card">
+                    <h2>Title</h2>
+                    <p>Somthing</p>
+            </li>
+            <li class="card">
+                    <h2>Title</h2>
+                    <p>Somthing</p>
+            </li>
+            <li class="card">
+                    <h2>Title</h2>
+                    <p>Somthing</p>
+            </li>
+            <li class="card">
+                    <h2>Title</h2>
+                    <p>Somthing</p>
+            </li>
+            <li class="card">
+                    <h2>Title</h2>
+                    <p>Somthing</p>
+            </li>
+            <li class="card">
+                    <h2>Title</h2>
+                    <p>Somthing</p>
+            </li>
+</ul>
+<img id="right" src="../images/angle-right-solid.svg">
+        </div>
+</div>
+    </div>
 
                 <a href="../includes/logout.inc.php">Logout</a>
             </div>
@@ -81,6 +104,36 @@ if($role==1){
                             <td></td> 
                             <td></td> 
                         </tr>
+        <a href="../includes/logout.inc.php">Logout</a>
+    </div>
+</div>
+        
+    <div id="page2"  class="appoinment-content hidden" >
+        <div>
+            <table>
+                <thead>
+                <tr>
+                    <th></th> <!-- Empty cell for the top-left corner -->
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th>12 AM</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td> 
+                    <td></td> 
+                    <td></td> 
+                    <td></td> 
+                </tr>
 
                         <tr>
                             <th>1 AM</th>
@@ -382,343 +435,17 @@ if($role==1){
                             </div>
                         </div>
 
-                    </div>
             </div>
-        
-        </main>
-    <script src="../scripts/dashboard.js"></script>
-<?php } ?>
+    </div>
 
-
-
-<?php if($role==4) { ?>
-   
-    <main>
-            <?php
-                include_once "../includes/Head-sidebar.inc.php";
-            ?>  
-            <div id="page1" class="dashboard-content" >
-                <div class="dashboard-container">
-                    <h1>Upcoming Event</h1>
-                    <div class="upcoming-div">
-                        <div class="event-con">
-                            <h2>Title</h2>
-                            <p>Somthing</p>
-                            <button class="dash-view-btn" type="button">view</button>
-                        </div>
+    <div class="patient-content, hidden">
+            <h1>Patient List</h1>
+            <div class="patient-main">
+                <div class="patient-list">
+                    <div class="patient-list-info">
+                        <img src="../images/male-user-64.png" width="35px" height="35px">
+                        <p>Example Name</p>
                     </div>
-                </div>
-
-                <div class="services-container">
-                    <h1>Services</h1>
-                    <div class="service-div">
-                        <div class="event-con">
-                            <img src="">
-                            <h2>Title</h2>
-                            <p>Somthing</p>
-                        <!--<button class="dash-view-btn" type="button">view</button>-->
-                        </div>
-                    </div>
-                </div>
-
-                <a href="../includes/logout.inc.php">Logout</a>
-            </div>
-
-
-            <div id="page2"  class="appoinment-content hidden" >
-                <div>
-                    <table>
-                        <thead>
-                        <tr>
-                            <th></th> <!-- Empty cell for the top-left corner -->
-                            <th>Monday</th>
-                            <th>Tuesday</th>
-                            <th>Wednesday</th>
-                            <th>Thursday</th>
-                            <th>Friday</th>
-                            <th>Saturday</th>
-                            <th>Sunday</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <th>12 AM</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td> 
-                            <td></td> 
-                            <td></td> 
-                            <td></td> 
-                        </tr>
-
-                        <tr>
-                            <th>1 AM</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <th>2 AM</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <th>3 AM</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <th>4 AM</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <th>5 AM</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <th>6 AM</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <th>7 AM</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <th>8 AM</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <th>9 AM</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <th>10 AM</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <th>11 AM</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <th>12 PM</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <th>1 PM</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <th>2 PM</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <th>3 PM</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <th>4 PM</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <th>5 PM</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <th>6 PM</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <th>7 PM</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <th>8 PM</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <th>9 PM</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <th>10 PM</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <th>11 PM</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        </tbody>
-                    </table>
-
-                </div>   
-            </div>
-            
-            <div  class="patient-content hidden ">
-                <h1>Patient List</h1>
-                <div class="patient-main">
-                    <div class="patient-list">
-                        <div class="patient-list-info">
-                            <img src="../images/male-user-64.png" width="35px" height="35px">
-                            <p>Example Name</p>
-                        </div>
 
                         <div class="patient-list-info">
                             <img src="../images/male-user-64.png" width="35px" height="35px">
@@ -752,68 +479,17 @@ if($role==1){
                             <a href="#">Report</a>
                         </div>
 
-                        <div class="contact-patient">
-                            <a href="#" >Contact Patient</a>
-                        </div>
-                    </div>
-                </div>
-        </div>
-    </main>
-    <script src="../scripts/AdminDashboard.js"></script>
-
-
-
-<!--<main>
-    
-        <div id="page1" class="patient-content">
-            <h1>Patient List</h1>
-            <div class="patient-main">
-                <div class="patient-list">
-                    <div class="patient-list-info">
-                        <img src="../images/male-user-64.png" width="35px" height="35px">
-                        <p>Example Name</p>
-                    </div>
-
-                    <div class="patient-list-info">
-                        <img src="../images/male-user-64.png" width="35px" height="35px">
-                        <p>Example Name</p>
-                    </div>
-
-                    <div class="patient-list-info">
-                        <img src="../images/male-user-64.png" width="35px" height="35px">
-                        <p>Example Name</p>
-                    </div>
-                </div>
-
-                <div class="Patient-profile">
-                    <img src="../images/male-user-64.png" width="100px" height="100px">
-                    <h2>Example Name</h2>
-
-                    <div class="parent">
-                        <div class="div1"> <p>Age : </p> </div>
-                        <div class="div2"> <p> 50</p> </div>
-                        <div class="div3"> <p>Phone : </p> </div>
-                        <div class="div4"> <p> 077 555 5555</p> </div>
-                        <div class="div5"> <p>Address : </p> </div>
-                        <div class="div6"> <p>uyhdhs asdghsui suiduisduiushd iosd suihuiashd suihduioash </p> </div>
-                        <div class="div7"> <p>Gender : </p> </div>
-                        <div class="div8"> <p> boing apache helicopter</p> </div>
-                    </div>
-
-                    <div class="options">
-                        <a href="#">Prescribe</a>
-                        <a href="#">Diet</a>
-                        <a href="#">Report</a>
-                    </div>
-
                     <div class="contact-patient">
                         <a href="#" >Contact Patient</a>
                     </div>
                 </div>
             </div>
     </div>
-</main>
-<script src="../scripts/dashboard.js"></script>-->
-<?php } ?>
+    
+    
+    <script src="../scripts/dashboard.js"></script>
+    <?php } ?>
+    
+    
 </body>
 </html>
