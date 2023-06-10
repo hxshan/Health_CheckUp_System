@@ -384,8 +384,9 @@ $role=$userInfo["RoleId"];
         </div>
     
     </main>
+    <script src="../scripts/dashboard.js"></script>
     <?php } ?>
 
-    <script src="../scripts/dashboard.js"></script>
+    
 </body>
 </html>
