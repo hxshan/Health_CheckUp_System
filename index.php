@@ -5,8 +5,8 @@
   if(isset($_SESSION["UserId"])){
     $userInfo=getUserInfo($conn,$_SESSION["UserId"]);
   }
+  
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>

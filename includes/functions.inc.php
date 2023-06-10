@@ -112,7 +112,25 @@ function getuserbydetails($conn,$firstname,$lastname,$email){
     }
 
 }
+
 //my Own
+
+function getPatientbyUserId($conn,$id){
+    $sql="SELECT * FROM patient WHERE UserId = ?;";
+    $stmt=mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($stmt,$sql)){
+        exit();
+    }else{
+        mysqli_stmt_bind_param($stmt,"i",$id);
+        mysqli_stmt_execute($stmt);
+        $result= mysqli_stmt_get_result($stmt);
+        mysqli_stmt_close($stmt);
+        if($row=mysqli_fetch_assoc($result)){
+            return $row;
+        }
+        
+    }   
+}
 function AddUserAsPaitent($conn,$firstname,$lastname,$email,$address,$DOB,$Gender){
 
     $UserId=getuserbydetails($conn,$firstname,$lastname,$email);
@@ -172,26 +190,21 @@ function CreateUser($conn,$firstname,$lastname,$email,$phone,$password,$roleId,$
 //my own
 function getUserInfo($conn,$id){
     $sql="SELECT * FROM Users WHERE id=?;";
-
     $stmt=mysqli_stmt_init($conn);
-
-    if(!mysqli_stmt_prepare($stmt,$sql)){
-
-       
+    if(!mysqli_stmt_prepare($stmt,$sql)){   
         exit();
     }
-    mysqli_stmt_bind_param($stmt,"s",$id);
+    mysqli_stmt_bind_param($stmt,"i",$id);
     mysqli_stmt_execute($stmt);
-
     $resultdata = mysqli_stmt_get_result($stmt);
     mysqli_stmt_close($stmt);
     if($row=mysqli_fetch_assoc($resultdata)){
         return $row;
     }
+
 }
 //youtube tutorial by Dani Krossing 
 function LoginUser($conn,$email,$password){
-
     $users=emailExist($conn,$email);
     if($users===false){
         header("location: ../pages/Login.php?error=emailnotregistered");
@@ -209,13 +222,11 @@ function LoginUser($conn,$email,$password){
         header("location: ../index.php?error=loged");
         exit();
     }
-
 } 
 
 //My own code Lies below
 function getCheckUpPlans($conn){
-    $sql="SELECT * FROM checkupplan";
-    
+    $sql="SELECT * FROM checkupplan"; 
     $result= mysqli_query($conn,$sql);
     return $result;
 
@@ -277,6 +288,38 @@ function getPatientbyUserId($conn,$id){
             return $row;
         }
     }
+}
+function makeCheckUpApp($conn,$Id,$planId){
+    $sql="INSERT INTO checkupappointment (PatientAppointmentId,CheckupPlanId) VALUES (?,?);";
+
+   
+    $stmt=mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($stmt,$sql)){
+        exit();
+    }
+    else{
+        mysqli_stmt_bind_param($stmt,"ii",$Id,$planId);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
+        
+
+    }
+}
+function makePatientApp($conn,$patientId,$CreatedDate,$scheduledDate,$status,$TypeId,$planId){
+    $sql="INSERT INTO patientappointment (PatientId,CreatedDate,ScheduledDate,Status,TypeId) VALUES (?,?,?,?,?);";
+
+    $stmt=mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($stmt,$sql)){
+        exit();
+    }
+    else{
+        mysqli_stmt_bind_param($stmt,"isssi",$patientId,$CreatedDate,$scheduledDate,$status,$TypeId);
+        mysqli_stmt_execute($stmt);
+        $PAId=mysqli_insert_id($conn);
+        mysqli_stmt_close($stmt);
+        makeCheckUpApp($conn,$PAId,$planId);
+    }   
+
 }
 function getPatientAppbyId($conn,$PId){
     $sql="SELECT * FROM patientappointment WHERE PatientId=?;";
