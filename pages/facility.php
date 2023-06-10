@@ -69,7 +69,7 @@
         <div class="right-fac">
           <div class="right-up">
         <div class="hos">
-          <h2>Hospitels</h2>
+          <h2>Hospitals</h2>
           <img src="../images/hospital-regular.svg" width="40px" />
           <p>
             A health care institution providing patient treatment with

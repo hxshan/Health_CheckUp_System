@@ -128,6 +128,21 @@ function AddUserAsPaitent($conn,$firstname,$lastname,$email,$address,$DOB,$Gende
         exit();
     }
 }
+function AddUserAsAdmin($conn,$firstname,$lastname,$email){
+
+    $UserId=getuserbydetails($conn,$firstname,$lastname,$email);
+    $sql = "INSERT INTO Admin (UserId) VALUES(?);";
+    $stmt=mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($stmt,$sql)){
+        exit();
+    }else{
+        mysqli_stmt_bind_param($stmt,"i",$UserId);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
+        header("location: ../pages/login.php?error=none");
+        exit();
+    }
+}
 
 //youtube tutorial by Dani Krossing modified further to fit the system
 function CreateUser($conn,$firstname,$lastname,$email,$phone,$password,$roleId,$address,$convertedDate,$Gender){
@@ -146,8 +161,13 @@ function CreateUser($conn,$firstname,$lastname,$email,$phone,$password,$roleId,$
     mysqli_stmt_bind_param($stmt,"sssssi",$firstname,$lastname,$email,$phone,$hashpwd,$roleId);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-
-    AddUserAsPaitent($conn,$firstname,$lastname,$email,$address,$convertedDate,$Gender);
+    if($roleId==1){
+        AddUserAsPaitent($conn,$firstname,$lastname,$email,$address,$convertedDate,$Gender);
+    }
+    elseif ($roleId==4){
+        AddUserAsAdmin($conn,$firstname,$lastname,$email);
+    }
+    
 }
 //my own
 function getUserInfo($conn,$id){

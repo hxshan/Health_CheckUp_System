@@ -12,6 +12,9 @@
     max-width: 100vh;
     max-height: 100vh;
 }   
+.container{
+    position: sticky;
+}
 
 .header
 {

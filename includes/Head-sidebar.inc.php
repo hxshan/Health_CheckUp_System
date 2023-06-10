@@ -55,7 +55,7 @@
             </div>
 
             <?php }?>
-            <?php if($role==3){?>
+            <?php if($role==3||$role==4){?>
 
             <div class="nav-item" id="patient-btn">
                 <p class="nav-link"><img src="../images/patients-64.png" height="40px" width="40px">Patients</p>
@@ -84,5 +84,5 @@
                 </div>
         </div>
     </div>
-</div>
+
 <script src="../scripts/header.js"></script>
