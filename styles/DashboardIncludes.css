@@ -85,6 +85,7 @@ margin-left: 10px;
     align-items: center;
     text-decoration: none;
     color: rgb(242, 242, 242);
+    font-weight: bold;
     width: 200px;
     cursor: pointer;
     margin: 10px 0;
@@ -92,6 +93,9 @@ margin-left: 10px;
 .nav-item:hover{
     background-color: #7FD858;
     color: white;
+    font-size: 1.2rem;
+    transition: 0.2s;
+    box-shadow: -1px 0px 10px black;
 }
 
 .navidown{
