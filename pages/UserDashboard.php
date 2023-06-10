@@ -4,6 +4,8 @@ require_once '../includes/dbh.inc.php';
 require_once '../includes/functions.inc.php';
 $userInfo=getUserInfo($conn,$_SESSION["UserId"]);
 $role=$userInfo["RoleId"];
+$PatientInfo=getPatientbyUserId($conn,$_SESSION["UserId"]);
+$patientId=$PatientInfo["Id"];
 
 ?>
 <!DOCTYPE html>
@@ -386,7 +388,7 @@ $role=$userInfo["RoleId"];
     </main>
     <script src="../scripts/dashboard.js"></script>
     <?php } ?>
-
+    
     
 </body>
 </html>

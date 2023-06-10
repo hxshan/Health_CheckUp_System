@@ -240,7 +240,24 @@ function getCheckUpDetails($conn,$id){
     }
 
 }
+function getPatientbyUserId($conn,$id){
+    $sql="SELECT * FROM patient WHERE UserId=?;";
+    $stmt=mysqli_stmt_init($conn);
 
+    if(!mysqli_stmt_prepare($stmt,$sql)){
+        exit();
+    }
+    else{
+        mysqli_stmt_bind_param($stmt,"i",$id);
+        mysqli_stmt_execute($stmt);
+
+        $resultdata = mysqli_stmt_get_result($stmt);
+        mysqli_stmt_close($stmt);
+        if($row=mysqli_fetch_assoc($resultdata)){
+            return $row;
+        }
+    }
+}
 function getPatientAppbyId($conn,$PId){
     $sql="SELECT * FROM patientappointment WHERE PatientId=?;";
     $stmt=mysqli_stmt_init($conn);
