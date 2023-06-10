@@ -1,5 +1,6 @@
 <?php
 
+//youtube tutorial by Dani Krossing 
 function emptyInputSignup($firstname,$lastname,$email,$password,$reppassword){
 
     $result=null;
@@ -12,9 +13,10 @@ function emptyInputSignup($firstname,$lastname,$email,$password,$reppassword){
     return $result;
 }
 function ConvertToDate($date){
-    $condate = date("Y-m-d", strtotime($date));
+    $condate = date("Y-m-d", strtotime($date));//line taken from stack overflow
     return $condate;
 }
+//youtube tutorial by Dani Krossing 
 function emptyInputLogin($email,$pwd){
 
     $result=null;
@@ -26,7 +28,7 @@ function emptyInputLogin($email,$pwd){
     }
     return $result;
 }
-
+//youtube tutorial by Dani Krossing 
 function invalidNameSignup($firstname,$lastname){
 
     $result=null;
@@ -43,6 +45,7 @@ function invalidNameSignup($firstname,$lastname){
     }
     return $result;
 }
+//youtube tutorial by Dani Krossing 
 function invalidEmailSignup($email){
 
     $result=null;
@@ -54,6 +57,7 @@ function invalidEmailSignup($email){
     }
     return $result;
 }
+//youtube tutorial by Dani Krossing 
 function pwdMatchInvalid($password,$reppassword){
 
     $result=null;
@@ -65,7 +69,7 @@ function pwdMatchInvalid($password,$reppassword){
     }
     return $result;
 }
-
+//youtube tutorial by Dani Krossing 
 function emailExist($conn,$email){
     $sql="SELECT * FROM Users WHERE Email=?;";
 
@@ -88,6 +92,7 @@ function emailExist($conn,$email){
         return $result;
     }
 }
+//own Code
 function getuserbydetails($conn,$firstname,$lastname,$email){
     $sql="SELECT * FROM Users WHERE FirstName=? AND LastName=? AND Email=?";
 
@@ -107,6 +112,7 @@ function getuserbydetails($conn,$firstname,$lastname,$email){
     }
 
 }
+//my Own
 function AddUserAsPaitent($conn,$firstname,$lastname,$email,$address,$DOB,$Gender){
 
     $UserId=getuserbydetails($conn,$firstname,$lastname,$email);
@@ -123,7 +129,7 @@ function AddUserAsPaitent($conn,$firstname,$lastname,$email,$address,$DOB,$Gende
     }
 }
 
-
+//youtube tutorial by Dani Krossing modified further to fit the system
 function CreateUser($conn,$firstname,$lastname,$email,$phone,$password,$roleId,$address,$convertedDate,$Gender){
     $sql="INSERT INTO Users (FirstName,LastName, Email,PhoneNumber,pwd,RoleId) VALUES (?,?,?,?,?,?)";
 
@@ -143,7 +149,7 @@ function CreateUser($conn,$firstname,$lastname,$email,$phone,$password,$roleId,$
 
     AddUserAsPaitent($conn,$firstname,$lastname,$email,$address,$convertedDate,$Gender);
 }
-
+//my own
 function getUserInfo($conn,$id){
     $sql="SELECT * FROM Users WHERE id=?;";
 
@@ -163,6 +169,7 @@ function getUserInfo($conn,$id){
         return $row;
     }
 }
+//youtube tutorial by Dani Krossing 
 function LoginUser($conn,$email,$password){
 
     $users=emailExist($conn,$email);
@@ -185,7 +192,7 @@ function LoginUser($conn,$email,$password){
 
 } 
 
-
+//My own code Lies below
 function getCheckUpPlans($conn){
     $sql="SELECT * FROM checkupplan";
     
@@ -207,15 +214,6 @@ function getCheckUpPlansbyId($conn,$id){
     
 }
 
-/*function makeCheckupAppointment($conn,$id){
-    $sql="INSERT INTO ";
-    $stmt=mysqli_stmt_init($conn);
-    if(!mysqli_stmt_prepare($stmt,$sql)){
-        exit();
-    }else{
-        mysqli_stmt_bind_param();
-    }
-}*/
 function getTestbyId($conn,$id){
     $sql="SELECT * FROM test WHERE Id = ?;";
     $stmt=mysqli_stmt_init($conn);
@@ -241,6 +239,19 @@ function getCheckUpDetails($conn,$id){
         return $result;
     }
 
-   
+}
 
+function getPatientAppbyId($conn,$PId){
+    $sql="SELECT * FROM patientappointment WHERE PatientId=?;";
+    $stmt=mysqli_stmt_init($conn);
+
+    if(!mysqli_stmt_prepare($stmt,$sql)){
+        exit();
+    }
+    else{
+        mysqli_stmt_bind_param($stmt,"i",$PId);
+        mysqli_stmt_execute($stmt);
+        $result= mysqli_stmt_get_result($stmt);
+        return $result;
+    }
 }

@@ -1,5 +1,9 @@
 <?php
 session_start();
+require_once '../includes/dbh.inc.php';
+require_once '../includes/functions.inc.php';
+$userInfo=getUserInfo($conn,$_SESSION["UserId"]);
+$role=$userInfo["RoleId"];
 
 ?>
 <!DOCTYPE html>
@@ -14,6 +18,8 @@ session_start();
     <title>Dashboard</title>
 </head>
 <body>
+<?php if($role==1)
+        {?>
     <main>
     <?php
         include_once "../includes/Head-sidebar.inc.php";
@@ -376,8 +382,9 @@ session_start();
 
             </div>
         </div>
-    </main>
     
+    </main>
+    <?php } ?>
 
     <script src="../scripts/dashboard.js"></script>
 </body>
