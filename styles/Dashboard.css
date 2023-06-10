@@ -185,7 +185,7 @@ tr:hover {
     padding: 15px;
 }
 
-.info h2, p, .icons {
+.info h2,.info p ,.icons {
     margin-bottom: 20px;
 }
 

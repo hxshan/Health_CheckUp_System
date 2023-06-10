@@ -47,7 +47,7 @@ session_start();
     </div>
     
         
-    <div id="page2"  class="appoinment-content, hidden" >
+    <div id="page2"  class="appoinment-content hidden" >
         <div>
             <table>
                 <thead>
@@ -333,7 +333,7 @@ session_start();
         </div>   
     </div>
    
-    <div  class="diet-plan-content, hidden" >
+    <div  class="diet-plan-content hidden" >
             <div class="welcome" >
                 <h1>Welcome to Diet Plan</h1>
             </div>
@@ -375,8 +375,9 @@ session_start();
                 </div>
 
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
+    
 
     <script src="../scripts/dashboard.js"></script>
 </body>

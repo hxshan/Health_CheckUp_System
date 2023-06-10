@@ -37,43 +37,43 @@
     </div>
     <div class="Navibar">
         <div class="naviup">
-            <div class="nav-item" onclick="showPage('page1');">
-                <a class="nav-link" href="../pages/UserDashboard.php"><img src="../images/dashboard.svg" height="40px" width="40px">Dashboard</a>
+            <div class="nav-item" id="dashboard-btn">
+                <p class="nav-link"><img src="../images/dashboard.svg" height="40px" width="40px">Dashboard</p>
             </div>
 
-            <div class="nav-item" onclick="showPage('page2');">
-                <a class="nav-link" href="#"><img src="../images/calendar.svg" height="40px" width="40px">Appointments</a>
+            <div class="nav-item" id="appointments-btn">
+                <p class="nav-link"><img src="../images/calendar.svg" height="40px" width="40px">Appointments</p>
             </div>
 
-            <div class="nav-item">
-                <a class="nav-link" href="#"><img src="../images/report-64.png" height="40px" width="40px">Reports</a>
+            <div class="nav-item" id="reports-btn">
+                <p class="nav-link"><img src="../images/report-64.png" height="40px" width="40px">Reports</p>
             </div>
 
             <?php if($role==1 || $role==2){?>
-            <div class="nav-item">
-                <a class="nav-link" href="#"> <img src="../images/diet-64.png" height="40px" width="40px">Diet Plans</a>
+            <div class="nav-item" id="dietplan-btn" >
+                <p class="nav-link"> <img src="../images/diet-64.png" height="40px" width="40px">Diet Plans</p>
             </div>
 
             <?php }?>
             <?php if($role==3){?>
 
-            <div class="nav-item">
-                <a class="nav-link" href="#"><img src="../images/patients-64.png" height="40px" width="40px">Patients</a>
+            <div class="nav-item" id="patient-btn">
+                <p class="nav-link"><img src="../images/patients-64.png" height="40px" width="40px">Patients</p>
             </div>
 
             <?php }?>
             <?php if($role==4){?>
                 
-            <div class="nav-item">
-                <a class="nav-link" href="#"><img src="../images/staff-64.png" height="40px" width="40px">Staff</a>
+            <div class="nav-item" id="staff-btn">
+                <p class="nav-link"><img src="../images/staff-64.png" height="40px" width="40px">Staff</p>
             </div>
 
         </div>
         <?php }?>
 
         <div class="navidown">
-        <div class="nav-item">
-                <a id="back-to-home" class="nav-link" href="../index.php"><img src="../images/Back-Arrow.png" height="40px" width="40px">Back to Home</a>
+        <div class="nav-item" id="back-to-home" >
+                <a class="nav-link" href="../index.php"><img src="../images/Back-Arrow.png" height="40px" width="40px">Back to Home</a>
             </div>
                 <div class="nav-item">
                     <a class="nav-link" href="#"><img src="../images/support-60.png" height="35px" width="40px">Support</a>

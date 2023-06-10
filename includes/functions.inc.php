@@ -200,7 +200,7 @@ function getCheckUpPlansbyId($conn,$id){
         exit();
     }else{
         mysqli_stmt_bind_param($stmt,"i",$id);
-        mysqli_execute($stmt);
+        mysqli_stmt_execute($stmt);
         $result= mysqli_stmt_get_result($stmt);
         return $result;
     }   
@@ -223,7 +223,7 @@ function getTestbyId($conn,$id){
         exit();
     }else{
         mysqli_stmt_bind_param($stmt,"i",$id);
-        mysqli_execute($stmt);
+        mysqli_stmt_execute($stmt);
         $result= mysqli_stmt_get_result($stmt);
         return $result;
     }   
@@ -236,7 +236,7 @@ function getCheckUpDetails($conn,$id){
         exit();
     }else{
         mysqli_stmt_bind_param($stmt,"i",$id);
-        mysqli_execute($stmt);
+        mysqli_stmt_execute($stmt);
         $result= mysqli_stmt_get_result($stmt);
         return $result;
     }
