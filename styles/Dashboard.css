@@ -76,7 +76,7 @@ margin-right: 30px;
 }
 
 .dash-view-btn:hover {
-    background-color: black;
+    background-color: rgb(102, 231, 9);
     color: rgb(24, 36, 197);
     border: 2px solid rgb(79, 90, 243);
     cursor: pointer;
@@ -185,7 +185,7 @@ tr:hover {
     padding: 15px;
 }
 
-.info h2, p, .icons {
+.info h2,.info p, .icons {
     margin-bottom: 20px;
 }
 
@@ -235,9 +235,11 @@ tr:hover {
 }
 
 .diet-plan-options a:hover{
-    background-color: #63fa22;
+    background-color: rgb(102, 231, 9);
+    color: rgb(24, 36, 197);
     box-shadow: 2px 2px 15px #63fa22;
     transition: 0.5s;
+    border: 2px solid rgb(79, 90, 243);
     cursor: pointer;
 }
 
