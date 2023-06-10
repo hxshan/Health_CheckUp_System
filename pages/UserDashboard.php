@@ -382,6 +382,54 @@ $role=$userInfo["RoleId"];
 
             </div>
     </div>
+
+    <div class="patient-content, hidden">
+            <h1>Patient List</h1>
+            <div class="patient-main">
+                <div class="patient-list">
+                    <div class="patient-list-info">
+                        <img src="../images/male-user-64.png" width="35px" height="35px">
+                        <p>Example Name</p>
+                    </div>
+
+                    <div class="patient-list-info">
+                        <img src="../images/male-user-64.png" width="35px" height="35px">
+                        <p>Example Name</p>
+                    </div>
+
+                    <div class="patient-list-info">
+                        <img src="../images/male-user-64.png" width="35px" height="35px">
+                        <p>Example Name</p>
+                    </div>
+                </div>
+
+                <div class="Patient-profile">
+                    <img src="../images/male-user-64.png" width="100px" height="100px">
+                    <h2>Example Name</h2>
+
+                    <div class="parent">
+                        <div class="div1"> <p>Age : </p> </div>
+                        <div class="div2"> <p> 50</p> </div>
+                        <div class="div3"> <p>Phone : </p> </div>
+                        <div class="div4"> <p> 077 555 5555</p> </div>
+                        <div class="div5"> <p>Address : </p> </div>
+                        <div class="div6"> <p>uyhdhs asdghsui suiduisduiushd iosd suihuiashd suihduioash </p> </div>
+                        <div class="div7"> <p>Gender : </p> </div>
+                        <div class="div8"> <p> boing apache helicopter</p> </div>
+                    </div>
+
+                    <div class="options">
+                        <a href="#">Prescribe</a>
+                        <a href="#">Diet</a>
+                        <a href="#">Report</a>
+                    </div>
+
+                    <div class="contact-patient">
+                        <a href="#" >Contact Patient</a>
+                    </div>
+                </div>
+            </div>
+    </div>
     
     
     <script src="../scripts/dashboard.js"></script>
