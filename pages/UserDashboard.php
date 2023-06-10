@@ -30,6 +30,7 @@ session_start();
                 </div>
             </div>
         </div>
+        <div class="services-container">
         <h1>Services</h1>
         <div class="whole">
         <div class="wrapper">
@@ -67,7 +68,7 @@ session_start();
 
         <a href="../includes/logout.inc.php">Logout</a>
     </div>
-    
+</div>
         
     <div id="page2"  class="appoinment-content hidden" >
         <div>
