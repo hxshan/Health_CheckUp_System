@@ -19,7 +19,7 @@ session_start();
         include_once "../includes/Head-sidebar.inc.php";
     ?>
 
-    <div id="page1" class="dashboard-content, hidden" >
+    <div id="page1" class="dashboard-content" >
         <div class="dashboard-container">
             <h1>Upcoming Event</h1>
             <div class="upcoming-div">
@@ -333,7 +333,7 @@ session_start();
         </div>   
     </div>
    
-    <div  class="diet-plan-content" >
+    <div  class="diet-plan-content, hidden" >
             <div class="welcome" >
                 <h1>Welcome to Diet Plan</h1>
             </div>
