@@ -15,7 +15,7 @@ if(isset($_SESSION["UserId"])){
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="../styles/checkUpPlans.css">
 
-        <title>Check Up plans</title>
+        <title>Check Up Plans</title>
         
     </head>
 
