@@ -146,7 +146,6 @@ table {
   border-collapse: collapse;
   width: 100%;
 }
-
 th,
 td {
   border: 1px solid #ccc;
@@ -592,4 +591,54 @@ tr:hover {
     border: 2px solid rgb(79, 90, 243);
     cursor: pointer;
     box-shadow: 0px 0px 15px rgb(64, 75, 219);
+}
+
+/*----------------------------------------------STAFF LIST ----------------------------------------*/
+.staff-content {
+    margin-left: 230px;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+
+.staff-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.staff-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 5px; 
+    min-width:95%;
+    max-width: 100%;
+    min-height: 400px;
+    padding: 20px 25px;
+    background: linear-gradient(#3C84AB,#85CDFD);
+    box-shadow: 1px 0px 5px;
+}
+
+.staff-list-info {    
+        width: 90%;
+        border: 1px solid black;
+        border-radius: 5px;
+        float: left;
+        padding: 10px 25px;
+        margin-bottom: 20px;
+        background-color: azure;
+        box-shadow: 0px 0px 5px;
+}
+
+.staff-list-info p {
+    display: inline-block;
+    vertical-align: 12px;
+    margin-left: 30px;
+}
+.staff-top
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }

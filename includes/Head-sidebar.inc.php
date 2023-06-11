@@ -79,9 +79,9 @@
                     <a class="nav-link" href="#"><img src="../images/support-60.png" height="35px" width="40px">Support</a>
                 </div>
             
-                <div class="nav-item">
+                <!--<div class="nav-item">
                     <a class="nav-link" href="#"><img src="../images/setting-64.png" height="40px" width="40px">Settings</a>
-                </div>
+                </div>-->
         </div>
     </div>
 
