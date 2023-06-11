@@ -82,7 +82,6 @@ function emailExist($conn,$email){
     }
     mysqli_stmt_bind_param($stmt,"s",$email);
     mysqli_stmt_execute($stmt);
-
     $resultdata = mysqli_stmt_get_result($stmt);
     mysqli_stmt_close($stmt);
     if($row=mysqli_fetch_assoc($resultdata)){
@@ -291,6 +290,21 @@ function getPatientbyUserId($conn,$id){
         }
     }
 }
+function getUsersbyRoleId($conn,$id){
+    $sql="SELECT * FROM users WHERE RoleId=?;";
+    $stmt=mysqli_stmt_init($conn);
+
+    if(!mysqli_stmt_prepare($stmt,$sql)){
+        exit();
+    }
+    else{
+        mysqli_stmt_bind_param($stmt,"i",$id);
+        mysqli_stmt_execute($stmt);
+
+        $resultdata = mysqli_stmt_get_result($stmt);
+        return $resultdata;
+    }
+}
 function makeCheckUpApp($conn,$Id,$planId){
     $sql="INSERT INTO checkupappointment (PatientAppointmentId,CheckupPlanId) VALUES (?,?);";
 
@@ -336,4 +350,32 @@ function getPatientAppbyId($conn,$PId){
         $result= mysqli_stmt_get_result($stmt);
         return $result;
     }
+}
+function deleteUserbyId($conn,$Id){
+    $sql="DELETE FROM users WHERE Id=?;";
+    $stmt=mysqli_stmt_init($conn);
+
+    if(!mysqli_stmt_prepare($stmt,$sql)){
+        exit();
+    }
+    else{
+        mysqli_stmt_bind_param($stmt,"i",$Id);
+        mysqli_stmt_execute($stmt);
+        header("location: ../pages/UserDashBoard.php");         
+    }
+
+
+}
+function deleteDietitianUserbyId($conn,$Id){
+    $sql="DELETE FROM dietitian WHERE UserId=?;";
+    $stmt=mysqli_stmt_init($conn);
+
+    if(!mysqli_stmt_prepare($stmt,$sql)){
+        exit();
+    }
+    else{
+        mysqli_stmt_bind_param($stmt,"i",$Id);
+        mysqli_stmt_execute($stmt);
+    }
+    deleteUserbyId($conn,$Id);
 }

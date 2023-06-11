@@ -10,6 +10,9 @@ if($role==1){
     $patientapp=getPatientAppbyId($conn,$patientId);
     $checkUpInfo=getCheckUpPlans($conn);
 }
+if($role==4){
+    $stafflist=getUsersbyRoleId($conn,3);
+}
 
 
 ?>
@@ -707,7 +710,7 @@ if($role==1){
                 </div>
             </div>
         </main>
-        <script src="../scripts/AdminDashboard.js"></script>
+        <script src="../scripts/DietitianDashboard.js"></script>
     <?php } ?>
     <!-- ADMINS PART-->
     <?php if($role==4) { ?>
@@ -717,13 +720,13 @@ if($role==1){
             ?>
             <div id="page1" class="dashboard-content" >
                 <div class="dashboard-container">
-                    <h1>Upcoming Event</h1>
+                    <h1>Dashboard</h1>
                     <div class="upcoming-div">
-                        <div class="event-con">
+                        <!--<div class="event-con">
                             <h2>Title</h2>
                             <p>Somthing</p>
                             <button class="dash-view-btn" type="button">view</button>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
                     
@@ -1036,19 +1039,27 @@ if($role==1){
                 </div>
             </div>
             
-            <div class="staff-content">
+            <div class="staff-content hidden">
                 <div class="staff-top">
                     <h1>Staff List</h1>
-                    <a href="StaffCreate.php">+ Add Staff</a>
+                    <a class="AddStaff-btn" href="StaffCreate.php">+ Add Staff</a>
                 </div>
                 <div class="staff-main">
                     <div class="staff-list">
+                        <?php while($row=mysqli_fetch_assoc($stafflist)) {?> 
                         <div class="staff-list-info">
-                            <img src="../images/male-user-64.png" width="35px" height="35px">
-                            <p>Example Name</p>
+                            <div class="staff-list-info-top">
+                                <img src="../images/male-user-64.png" width="35px" height="35px">
+                                <p><?php echo $row["FirstName"].' '.$row["LastName"] ?></p>
+                            </div> 
+                            <form action="../includes/deleteUser.inc.php" method="post">
+                                <input type="hidden" name="userId" <?php echo "value=\"".$row["Id"]."\"";?>>
+                                <button type="submit" name="delete">Remove</button>
+                            </form>
                         </div>
+                        <?php }?>
 
-                            <div class="staff-list-info">
+                            <!--<div class="staff-list-info">
                                 <img src="../images/male-user-64.png" width="35px" height="35px">
                                 <p>Example Name</p>
                             </div>  
@@ -1056,7 +1067,7 @@ if($role==1){
                             <div class="staff-list-info">
                                 <img src="../images/male-user-64.png" width="35px" height="35px">
                                 <p>Example Name</p>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
             </div>     
