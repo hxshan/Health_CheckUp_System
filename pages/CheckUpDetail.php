@@ -24,17 +24,18 @@ $data=getCheckUpDetails($conn,$id);
 
     <body>
         <main>
-        <div class="back-btn-div">
-        <a href="../index.php"><button class="back-btn" type="button">
-                <lord-icon
-                    src="https://cdn.lordicon.com/jxwksgwv.json"
-                    trigger="hover"
-                    colors="primary:#121331"
-                    style="width:50px;height:50px;transform: rotate(180deg);">
-                    
-                </lord-icon>
-            </button></a>
-        </div>
+            <div class="back-btn-div">
+            <a href="../index.php"><button class="back-btn" type="button">
+                    <lord-icon
+                        src="https://cdn.lordicon.com/jxwksgwv.json"
+                        trigger="hover"
+                        colors="primary:#121331"
+                        style="width:50px;height:50px;transform: rotate(180deg);">
+
+                    </lord-icon>
+                </button></a>
+            </div>
+        <div class="main-con">
             <div class="checkup-info-con">
                 <div class="checkup-img">
                     <img src="../images/CheckUp.jpg" alt="image">
@@ -61,7 +62,7 @@ $data=getCheckUpDetails($conn,$id);
             </div>
             <div class="appointment-con">
                 <h2>Make an Appointment</h2>
-                <form action="../includes/checkupApp.inc.php" method="post">
+                <form class="app-form" action="../includes/checkupApp.inc.php" method="post">
                     <div class="input-con">
                         <label for="date">Date:</label>
                         <input type="date" id="date" name="date">
@@ -74,6 +75,7 @@ $data=getCheckUpDetails($conn,$id);
                     <input id="submit-btn" name="make-App" type="submit" value="Submit Appointment">
                 </form>
             </div>
+        </div>
             
         </main>
         <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>

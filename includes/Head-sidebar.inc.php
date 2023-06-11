@@ -45,9 +45,9 @@
                 <p class="nav-link"><img src="../images/calendar.svg" height="40px" width="40px">Appointments</p>
             </div>
 
-            <div class="nav-item" id="reports-btn">
+            <!--<div class="nav-item" id="reports-btn">
                 <p class="nav-link"><img src="../images/report-64.png" height="40px" width="40px">Reports</p>
-            </div>
+            </div>-->
 
             <?php if($role==1 || $role==2){?>
             <div class="nav-item" id="dietplan-btn" >

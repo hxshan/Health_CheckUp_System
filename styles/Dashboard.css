@@ -40,7 +40,7 @@ margin-right: 30px;
 /*-------------------------------------------------------Dashbord-------------------------------------------------------------*/
 .upcoming-div {
   /*  background: linear-gradient(royalblue, #92f468);*/
-  background:linear-gradient(#3C84AB,#85CDFD) ;
+    background:linear-gradient(#3C84AB,#85CDFD) ;
     display: flex;
     align-items: center;
     margin-top: 15px;
@@ -49,13 +49,14 @@ margin-right: 30px;
     border-radius: 5px;
     padding: 30px 40px;
     min-height: 300px;
+    overflow-x: auto;
 }
 
 .dashboard-container h1{
     margin-top: 10px;
 }
 .event-con {
-    background-color: azure;
+    background-color: azure ;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,9 +64,13 @@ margin-right: 30px;
     border: 1px solid black;
     border-radius: 5px;
     box-shadow: 0px 0px 5px;
-    padding: 10px 20px;
+    padding: 10px 0;
     height: 280px;
-    width: 200px;
+    flex: 0 0 230px;
+    margin:0 25px;
+}
+.event-con h2{
+    text-align: center;
 }
 .service-div .card{
     list-style: none;
