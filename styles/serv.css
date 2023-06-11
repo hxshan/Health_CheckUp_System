@@ -1,0 +1,28 @@
+.arrow{
+    height: fit-content;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0px 100px 450px;
+}
+
+.service-div .card{
+    list-style: none;
+    background-color: #7FD858;
+    height: 300px;
+    width: 250px;
+    border: 2px solid  #369b0b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+}
+
+.wrapper img:hover{
+    padding: 15px;
+    transition: 0.3s;
+}
