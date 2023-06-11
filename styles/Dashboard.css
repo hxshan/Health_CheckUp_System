@@ -72,20 +72,14 @@ margin-right: 30px;
 .event-con h2{
     text-align: center;
 }
-.service-div .card{
-    list-style: none;
-    background-color: #7FD858;
-    height: 300px;
-    width: 250px;
-    
-    border: 2px solid white;
-}
+
 .wrapper{
     max-width:1090px;
     width: 100%;
 }
 .whole{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0 35px;
@@ -131,13 +125,8 @@ margin-right: 30px;
     border-radius: 50%;
     padding: 10px;
     cursor: pointer;
-    position: absolute;
-}
-.wrapper img:first-child{
-    left:400px;
-}
-.wrapper img:last-child{
-    right:200px;
+    margin-right: 50px;
+    transition: 0.3s;
 }
 
 .service-div .dragging {

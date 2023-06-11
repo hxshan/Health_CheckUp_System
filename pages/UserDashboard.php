@@ -20,6 +20,7 @@ if($role==1){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/Dashboard.css">
     <link rel="stylesheet" href="../styles/DashboardIncludes.css">
+    <link rel="stylesheet" href="../styles/serv.css">
    
     <title>Dashboard</title>
 </head>
@@ -51,7 +52,6 @@ if($role==1){
                         <h1>Services</h1>
                         <div class="whole">
                             <div class="wrapper">
-                                <img id="left" src="../images/angle-left-solid.svg">
                                 <ul class="service-div">
                                <?php while($chkrow=mysqli_fetch_assoc($checkUpInfo) ) {?>
                                         <li class="card">
@@ -61,8 +61,11 @@ if($role==1){
                                         </li>
                                 <?php } ?>  
                                 </ul>
+                                <div class="arrow">
+                                <img id="left" src="../images/angle-left-solid.svg">
                             <img id="right" src="../images/angle-right-solid.svg">
                         </div>
+    </div>
                         </div>
                     </div>
 
