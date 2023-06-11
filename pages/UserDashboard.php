@@ -339,6 +339,10 @@ if($role==1){
                                 <h3>Diet plan name</h3>
                                 <p>Started date : </p>
                                 <p>Status : </p>
+                                <p>Meal 1:</p>
+                                <p>Meal 2:</p>
+                                <p>Meal 3:</p>
+                                
                             </div>
                         </div>
                         <div>
@@ -702,7 +706,7 @@ if($role==1){
                             <div class="patient-list-info">
                                 <img src="../images/male-user-64.png" width="35px" height="35px">
                                 <p>Example Name</p>
-                            </div>
+                            </div>  
 
                             <div class="patient-list-info">
                                 <img src="../images/male-user-64.png" width="35px" height="35px">

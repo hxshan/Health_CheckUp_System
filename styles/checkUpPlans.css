@@ -27,7 +27,7 @@ margin-top: 15px;
 .wrapper {
     display: grid;
     grid-template-columns:1fr 1fr 1fr 1fr;
-    gap: 10px;
+    gap: 6px;
     
   }
 .checkup-info-con{
@@ -55,6 +55,9 @@ body {
   }
   
 /*Appoiintment scheduling part idk wht to call it*/
+.main-con{
+  display: flex;
+}
 .appointment-con {
     width: 400px;
     padding: 20px;
@@ -67,9 +70,12 @@ body {
     text-align: center;
     margin-bottom: 20px;
   }
-  
+  .app-form{
+    display: flex;
+    flex-direction: column;
+  }
   .input-con {
-    margin-bottom: 15px;
+    margin:15px 0;
   }
   
   label {
