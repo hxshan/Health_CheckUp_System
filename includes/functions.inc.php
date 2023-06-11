@@ -115,22 +115,7 @@ function getuserbydetails($conn,$firstname,$lastname,$email){
 
 //my Own
 
-function getPatientbyUserId($conn,$id){
-    $sql="SELECT * FROM patient WHERE UserId = ?;";
-    $stmt=mysqli_stmt_init($conn);
-    if(!mysqli_stmt_prepare($stmt,$sql)){
-        exit();
-    }else{
-        mysqli_stmt_bind_param($stmt,"i",$id);
-        mysqli_stmt_execute($stmt);
-        $result= mysqli_stmt_get_result($stmt);
-        mysqli_stmt_close($stmt);
-        if($row=mysqli_fetch_assoc($result)){
-            return $row;
-        }
-        
-    }   
-}
+
 function AddUserAsPaitent($conn,$firstname,$lastname,$email,$address,$DOB,$Gender){
 
     $UserId=getuserbydetails($conn,$firstname,$lastname,$email);

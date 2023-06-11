@@ -364,6 +364,7 @@ if($role==1){
 
                             <div class="new-diet-plan">
                                 <h1>Diet Plans</h1>
+                                <p>Click below to get a pre-made diet plan</p>
                                 <div class="diet-plan-options">
                                     <div>
                                         <a href="#">Pre-made diet plan</a>
