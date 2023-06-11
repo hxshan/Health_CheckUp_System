@@ -10,16 +10,29 @@
 
 .service-div .card{
     list-style: none;
-    background-color: #7FD858;
+    background-color:azure;
     height: 300px;
     width: 250px;
     border: 2px solid  #369b0b;
     display: flex;
+    padding:0px 5px 0px 5px;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     border-radius: 10px;
+    text-align: center;
 
+}
+
+.card>a
+{
+    padding: 5px;
+    text-decoration: none;
+    border:2px solid #369b0b;
+    border-radius: 20px;
+    background-color: #369b0b;
+    color: rgb(255, 255, 255);
+    font-size: small;
 }
 
 .wrapper img:hover{
