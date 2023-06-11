@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.personal-details {
+    display: flex;
+    justify-content: space-around;
+    background:linear-gradient(#3C84AB,#85CDFD) ;
+    width: 800px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px 30px;
+}
+
+.image img {
+    height: 500px;
+}
+
+.questions {
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: aliceblue;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.options select, .options input, .options textarea{
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+#preference{
+    min-height: 100px;
+}
+
+.submit-btn-div {
+    text-align: end;
+    margin-top: 20px;
+}
+
+.submit-btn{
+    min-height: 30px;
+    min-width: 80px;
+    background-color:royalblue;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    transition: 0.5s;
+    font-weight: bold;
+    font-size: 0.6rem;
+}
+
+.submit-btn:hover{
+    background-color:#7FD858;
+    cursor: pointer;
+    color: black;
+    border: none;
+}

@@ -27,9 +27,10 @@
             </div>
             <div class="dropdown-container closed">
             <div class="dropdown-content">
-                <a href="#">Profile</a>
-                <a href="pages/UserDashboard.php">Dashboard</a>
-                <a href="includes/logout.inc.php">Log out</a>
+                <a href="UserProfile.php">Profile</a>
+                <a href="UserDashboard.php">Dashboard</a>
+                <a href="../includes/logout.inc.php">Log out</a>
+                
             </div>
         </div>
         </div>

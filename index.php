@@ -69,7 +69,7 @@
         <div class="appointment-btns">
           <?php if(isset($_SESSION["UserId"])){?>
             <a href="pages/checkUpPlans.php">Make Appointment</a>
-            <a href="#">Get Diet Plan</a>
+            <a href="pages/PersonalisedDiet.php">Get Diet Plan</a>
           <?php } else { ?>
             <a href="pages/login.php">Make Appointment</a>
             <a href="pages/login.php">Get Diet Plan</a>

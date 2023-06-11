@@ -1,8 +1,6 @@
 var dashboard_btn = document.querySelector("#dashboard-btn");
 var appointments_btn = document.querySelector("#appointments-btn");
 var patient_btn = document.querySelector("#patient-btn");
-var staff_btn = document.querySelector("#staff-btn");
-var staff_con =document.querySelector(".staff-content");
 var dashboard_con =document.querySelector(".dashboard-content");
 var appointment_con =document.querySelector(".appoinment-content");
 var patient_con =document.querySelector(".patient-content");
@@ -22,9 +20,7 @@ dashboard_btn.addEventListener("click",()=>{
   if(!patient_con.classList.contains("hidden")){
     patient_con.classList.add("hidden")
   }
-  if(!staff_con.classList.contains("hidden")){
-    staff_con.classList.add("hidden")
-  }
+
 })
 
 appointments_btn.addEventListener("click",()=>{
@@ -38,9 +34,6 @@ appointments_btn.addEventListener("click",()=>{
   if(!patient_con.classList.contains("hidden")){
     patient_con.classList.add("hidden")
   }
-  if(!staff_con.classList.contains("hidden")){
-    staff_con.classList.add("hidden")
-  }
 })
 
 
@@ -53,24 +46,6 @@ patient_btn.addEventListener("click",()=>{
   }
   if(!appointment_con.classList.contains("hidden")){
     appointment_con.classList.add("hidden")
-  }
-  if(!staff_con.classList.contains("hidden")){
-    staff_con.classList.add("hidden")
-  }
-
-})
-staff_btn.addEventListener("click",()=>{
-  if(!patient_con.classList.contains("hidden")){
-    patient_con.classList.add("hidden")
-  }
-  if(!dashboard_con.classList.contains("hidden")){
-    dashboard_con.classList.add("hidden");
-  }
-  if(!appointment_con.classList.contains("hidden")){
-    appointment_con.classList.add("hidden")
-  }
-  if(staff_con.classList.contains("hidden")){
-    staff_con.classList.remove("hidden")
   }
  
 

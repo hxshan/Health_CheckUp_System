@@ -620,6 +620,9 @@ tr:hover {
 }
 
 .staff-list-info {    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         width: 90%;
         border: 1px solid black;
         border-radius: 5px;
@@ -629,7 +632,10 @@ tr:hover {
         background-color: azure;
         box-shadow: 0px 0px 5px;
 }
-
+.staff-list-info-top{
+    display: flex;
+    align-items: center;
+}
 .staff-list-info p {
     display: inline-block;
     vertical-align: 12px;
@@ -641,4 +647,14 @@ tr:hover {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
+}
+
+.AddStaff-btn{
+    text-decoration: none;
+    background-color: royalblue;
+    padding:10px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
 }
