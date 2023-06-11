@@ -55,6 +55,8 @@ main{
     align-items: center;
     justify-content: space-between;
     max-height: 180px;
+    background-color: royalblue;
+    border-bottom-right-radius: 20px;
 }
 .log{
     margin-right: 150px;
