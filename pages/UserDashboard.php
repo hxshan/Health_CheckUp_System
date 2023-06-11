@@ -71,7 +71,7 @@ if($role==1){
 
 
             </div>
-            <div id="page2"  class="appoinment-content hidden" >
+            <div id="page2"  class="appoinment-content hidden" > 
                 <div>
                     <table>
                         <thead>
