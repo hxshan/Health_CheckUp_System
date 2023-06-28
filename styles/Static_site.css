@@ -21,10 +21,10 @@ main{
 }
 
 .prof-img{
-    width: 100px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     margin-left: 1rem;
-    border-radius: 50%;
+   
     
 }
 .prof-img:hover{
@@ -33,6 +33,7 @@ main{
 .prof-img img{
     height: 100%;
     width: 100%;
+    border-radius: 50%;
 }
 .center{
     display: flex;
