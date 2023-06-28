@@ -16,7 +16,7 @@ $userInfo=getUserInfo($conn,$_SESSION["UserId"])
 </head>
 <body>
     <main>
-    <a href="UserDashboard.php">Back</a>
+    <button class="b_back"><a href="UserDashboard.php">Back</a></button>
     <div class="profile-content">
             <div class="profile-info">
                 <img src="../images/male-user-64.png" width="100px" height="100px">
@@ -30,7 +30,7 @@ $userInfo=getUserInfo($conn,$_SESSION["UserId"])
                     <div class="div5"> <p>Phone : </p> </div>
                     <div class="div6"> <p> <?php echo $userInfo["PhoneNumber"];?></p> </div>
                     <div class="div7"> <p>Address : </p> </div>
-                    <div class="div8"> <p>uyhdhs asdghsui suiduisduiushd iosd suihuiashd suihduioash </p> </div>
+                    <div class="div8"> <p>1324/ab,St.Cleare Road,colombo </p> </div>
                 </div>
             </div>
 
