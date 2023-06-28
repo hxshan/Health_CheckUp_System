@@ -9,7 +9,17 @@
     </head>
 
     <body>
-        <a href="../index.php">Back</a>
+        <div class="back-btn-div">
+        <a href="../index.php"><button class="back-btn" type="button">
+                <lord-icon  
+                    src="https://cdn.lordicon.com/jxwksgwv.json"
+                    trigger="hover"
+                    colors="primary:#121331"
+                    style="width:50px;height:50px;transform: rotate(180deg);">         
+                </lord-icon>
+            Back</button></a>
+        </div>
+
         <div class="personal-details">
             <div class="image">
                 <img src="https://www.parents.com/thmb/gCbT_HYX_MUlj3kg5Y3Hr35U1Zg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/550_101700658_L_w-94d5210c15f145eca19db4ad4cc2941a.jpg" alt="">
