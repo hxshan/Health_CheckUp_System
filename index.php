@@ -31,7 +31,7 @@
               <div class="prof-info">
                 <?php echo "<p>". $userInfo["FirstName"]." ".$userInfo["LastName"]."</p>"?>
                 <div class="prof-img">
-                  <img src="images/pfp.jpg" alt="profle pic">
+                  <img src="images/maththiya.jpg" alt="profle pic">
                 </div>
               </div>
               <div class="dropdown-container closed">

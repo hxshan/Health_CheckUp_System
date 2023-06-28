@@ -17,12 +17,15 @@ main{
     flex-direction: row;
     align-items: center;
     max-height: 3rem;
+    
 }
 
 .prof-img{
-    max-width: 2rem;
-    height: auto;
+    width: 70px;
+    height: 70px;
     margin-left: 1rem;
+   
+    
 }
 .prof-img:hover{
     cursor: pointer;
@@ -30,6 +33,7 @@ main{
 .prof-img img{
     height: 100%;
     width: 100%;
+    border-radius: 50%;
 }
 .center{
     display: flex;
