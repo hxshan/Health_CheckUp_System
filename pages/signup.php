@@ -81,6 +81,13 @@
                             <label for="reppassword">Confirm Password</label>
                             <input  id="reppassword" class="input2" type="password" name="reppassword" placeholder="Confirm Password">
                         </div>
+                        <?php
+                        if(isset($_GET["error"])){
+                            $error=$_GET["error"];
+                            if($error=="wrongpwd"){
+                        }
+
+                    }?>
                         <button type="submit" class="submit" name="submit">Sign up</button>
                     </div>
                     <p style="color:red;font-size:1.2rem;font-weight:600" class="error-msg hidden">ALL FIELDS SHOUD BE FILLED!!</p>

@@ -1,7 +1,7 @@
 <?php 
 session_start();
 require_once '../includes/dbh.inc.php';
-require_once '../includes/functions.inc.php';
+require_once '../includes/functions.inc.php';       
 
 $id=$_GET["chkId"];
 $chkdata=getCheckUpPlansbyId($conn,$id);

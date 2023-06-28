@@ -337,7 +337,7 @@ function makePatientApp($conn,$patientId,$CreatedDate,$scheduledDate,$status,$Ty
     }   
 
 }
-function getPatientAppbyId($conn,$PId){
+function getPatientAppbyId($conn,$PId){//get patient appoinment by patient id
     $sql="SELECT * FROM patientappointment WHERE PatientId=?;";
     $stmt=mysqli_stmt_init($conn);
 
@@ -349,6 +349,18 @@ function getPatientAppbyId($conn,$PId){
         mysqli_stmt_execute($stmt);
         $result= mysqli_stmt_get_result($stmt);
         return $result;
+    }
+}
+function removePatientAppbyId($conn,$Pid,$Id){//remove patient appoinment by patient id
+    $sql="DELETE  FROM checkupappointment WHERE PatientAppointmentId=?;";
+    $stmt=mysqli_stmt_init($conn);
+
+    if(!mysqli_stmt_prepare($stmt,$sql)){
+        exit();
+    }
+    else{
+        mysqli_stmt_bind_param($stmt,"i",$Id);
+        mysqli_stmt_execute($stmt);
     }
 }
 function deleteUserbyId($conn,$Id){
