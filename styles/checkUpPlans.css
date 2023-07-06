@@ -15,7 +15,8 @@ body
     width: 300px;
     height: 370px;
     text-align: center;
-    border-radius: 20px;    
+    border-radius: 20px;
+    margin-top:10px;   
 }
 .title1>a
 {
@@ -50,6 +51,8 @@ margin-top: 15px;
     display: grid;
     grid-template-columns:1fr 1fr 1fr 1fr;
     gap: 6px;
+    margin-top: 1rem;
+    padding-top: 1rem;
     
   }
 .checkup-info-con{

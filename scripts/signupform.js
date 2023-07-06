@@ -16,7 +16,7 @@ function Emptyinputs(){
     }
 }
 
-//needs fixxing
+//validate name
 function ValidateName(){
     if((/^[a-zA-Z]+$/).test(firstname.value) || (/^[a-zA-Z]+$/).test(lastname.value)){
         return true;

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -21,7 +22,10 @@
             </button></a>
         </div>
 
+        <?php
+       
         
+        ?>
         <div class="login-con">
             <form class="login-form" action="../includes/login.inc.php" method="post">
                 <!--<img class="form-img" src="../images/form-heart.png">
@@ -34,7 +38,18 @@
                 <!--<p class="message">Step into a world of personalized care.</p>-->
                     <input class="log-input" type="email" name="email" placeholder="Email"> 
                     <input class="log-input" type="password" name="password" placeholder="password">
+                    <?php 
+                     if(isSet($_GET["error"]) ){
+                        $error=$_GET["error"];
+                        if($error!=null && $error=="invalidemail"){?>
+                        <p style="color:red;font-weight:600;">Email is Invalid!</p>
 
+                        <?php }else if($error="passwordsdontmatch"){?>
+                             <p style="color:red;font-weight:600;">Passwords dont match!</p>
+                       <?php }
+                     } ?>
+                    
+                   
                 <button class="log-submit" type="submit" name="submit">Sign in</button>
 
                 <p class="signin">Don't have an acount ? <a href="signup.php">Sign up</a> </p>

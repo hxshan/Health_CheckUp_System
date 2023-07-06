@@ -46,7 +46,7 @@ if($role==4){
                                 echo "<h2>CheckUp Appointment</h2>";
                              }?>
                             <p>Upcoming Appointment</p>
-                            <button class="dash-view-btn" type="button">view</button>
+                            <button class="dash-view-btn" type="button"><?php echo "<a href=\"PatientAppDetail.php?chkId=".$row["Id"]."\""."> View More </a>"?></a></button>
                         </div>
                         <?php } ?>
                     </div>
