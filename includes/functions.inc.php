@@ -331,7 +331,7 @@ function makePatientApp($conn,$patientId,$CreatedDate,$scheduledDate,$status,$Ty
     else{
         mysqli_stmt_bind_param($stmt,"isssi",$patientId,$CreatedDate,$scheduledDate,$status,$TypeId);
         mysqli_stmt_execute($stmt);
-        $PAId=mysqli_insert_id($conn);
+        $PAId=mysqli_insert_id($conn);//get the patient if of the newest record
         mysqli_stmt_close($stmt);
         makeCheckUpApp($conn,$PAId,$planId);
     }   

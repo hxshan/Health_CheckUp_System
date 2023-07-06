@@ -1,5 +1,8 @@
+
+
 <?php
     session_start();
+    // this is the make appointment details and get the patient details
     
     if(isset($_POST["make-App"])){
         require_once 'dbh.inc.php';
@@ -13,6 +16,6 @@
         $CreatedDate = date('Y-m-d H:i:s');
         $planId=$_POST["chkId"];
         $scheduledDate=$conDate.' '.$time;
-        makePatientApp($conn,$patientId,$CreatedDate,$scheduledDate,'Pending Completion',1,$planId);
+        makePatientApp($conn,$patientId,$CreatedDate,$scheduledDate,'Pending Completion',1,$planId);// assign the details
         header("location: ../pages/UserDashboard.php");
     }
